@@ -1,2 +1,116 @@
-// Normally mainpage styles
- 
+.index-wrap
+	border: 1px solid #dee0e9
+	background: #fff 
+.spec-offer
+	border-right: 1px solid #e5e7ed 
+	width: 368px
+	height: 542px
+	color: #000 
+	+background-image(radial-gradient(center center, 549px 549px, #fff 0%, #cacfe0 100%))
+.spec-offer__top
+	padding: 32px 32px 10px
+.spec-offer__title
+	margin-bottom: -4px
+	font-size: 30px
+	a
+		color: #000 
+.spec-offer__img
+	position: relative
+	text-align: center
+	img
+		position: relative
+		z-index: 2
+		margin-bottom: 13px
+		max-width: 175px
+		max-width: 300px 
+.spec-offer__label
+	position: absolute
+	left: 50%
+	bottom: 57px
+	margin-left: -165px
+	+s(spec-offer)
+	z-index: 3
+.spec-offer__corner-left,
+.spec-offer__corner-right
+	position: absolute
+	width: 0px
+	height: 0px
+	border-style: solid
+	z-index: 1
+.spec-offer__corner-left
+	bottom: 149px
+	left: 18px
+	border-width: 0 0 25px 83px
+	+rotate(-4)
+	border-color: transparent transparent #62687e transparent
+.spec-offer__corner-right
+	bottom: 70px
+	right: 19px
+	+rotate(-20)
+	border-width: 25px 0 0 88px
+	border-color: transparent transparent transparent #62687e
+	
+.spec-offer__bottom
+	+clr
+	padding: 0 15px 0 22px 
+	a
+		color: $blue 
+	.spec-offer__price
+		color: #fff 
+	.rate
+		float: left
+		margin-top: 8px
+.spec-offer__rate
+	float: left
+	margin-top: 4px
+	width: 120px
+.spec-offer__price
+	float: right
+	padding: 4px 15px 4px 17px  
+	font-size: 24px
+	text-transform: uppercase
+	background: #eb6014 
+	strong
+		font-size: 32px
+	sup
+		font-size: 20px
+		position: relative
+		top: -10px
+		
+.priority
+	position: relative
+	float: left
+	border: 1px solid #d2d5dd
+	border-bottom-width: 2px 
+	margin: 15px 0 16px 17px
+	height: 62px
+	width: 318px
+	line-height: 62px 
+	background: #f0f0f1 
+	+fsb
+	color: #62687e
+	&:first-child
+		margin-left: 0
+	.icon-shop,
+	.icon-car,
+	.priority__title
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
+	.icon-shop
+		margin: 0 30px 
+	.icon-car
+		margin: 0 28px 
+	.priority__title
+		width: 40%
+	.icon-free
+		position: absolute
+		top: 50%
+		margin-top: -24px
+		right: 13px
+.icon-shop
+	+s(ico-shop)
+.icon-car
+	+s(ico-car)        
+.icon-free
+	+s(free)
