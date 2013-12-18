@@ -15,10 +15,15 @@
 		background: #fff
 		border-color: transparent  
 		
+.tab-wrap
+	height: 447px
+	background: #f0f0f1 	
+	border: 1px solid #e1e2e9	
+	.tab
+		border: 0
 .tab
 	background: #f0f0f1
 	border: 1px solid #e1e2e9
-	border-bottom: 0
 	+clr
 .tab__item
 	float: left
@@ -58,6 +63,14 @@
 	&:after
 		right: 0
 		+arr(16,16,#687584,bl)
+.box__line
+	position: absolute
+	left: 14px
+	right: 16px
+	bottom: -16px
+	height: 16px
+	background: #000
+	+opacity(.1) 
 	 
 .item
 	float: left
@@ -116,15 +129,15 @@
 		height: 258px
 
 .pager
-	margin-bottom: 19px
+	margin: 6px 0 24px
 	font-size: 0
 	text-align: center
 	button
 		position: relative 
 		margin-left: 16px
 		border: 1px solid $violet_dark
-		width: 14px
-		height: 14px
+		width: 16px
+		height: 16px
 		background: #fff 
 		+border-radius(50%)
 		&:first-child
