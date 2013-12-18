@@ -1,9 +1,11 @@
 .index-wrap
 	border: 1px solid #dee0e9
 	background: #fff 
+	+clr
 .spec-offer
+	float: left
 	border-right: 1px solid #e5e7ed 
-	width: 368px
+	width: 367px
 	height: 542px
 	color: #000 
 	+background-image(radial-gradient(center center, 549px 549px, #fff 0%, #cacfe0 100%))
@@ -86,6 +88,7 @@
 	height: 62px
 	width: 318px
 	line-height: 62px 
+	font-size: 16px
 	background: #f0f0f1 
 	+fsb
 	color: #62687e
@@ -101,16 +104,35 @@
 		margin: 0 30px 
 	.icon-car
 		margin: 0 28px 
-	.priority__title
-		width: 40%
 	.icon-free
 		position: absolute
 		top: 50%
 		margin-top: -24px
 		right: 13px
+.priority__title
+	span
+		display: block
+		font-size: 18px
 .icon-shop
 	+s(ico-shop)
 .icon-car
 	+s(ico-car)        
 .icon-free
-	+s(free)
+	+s(free)  
+
+.spec-offer-items 
+	overflow: hidden
+	.item
+		padding: 18px 16px 25px
+		width: 176px
+		+clr
+	.item__top
+		height: 45px
+	.item__title
+		white-space: nowrap
+	.item__img
+		margin-bottom: 2px
+		height: 160px
+		line-height: 160px
+	.item__price
+		float: right

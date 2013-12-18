@@ -1,14 +1,14 @@
-/*!
-* jQuery Cycle2; build: v20131005
+/*
+* jQuery Cycle2; build: v20130909
 * http://jquery.malsup.com/cycle2/
 * Copyright (c) 2013 M. Alsup; Dual licensed: MIT/GPL
 */
 
-/*! core engine; version: 20131003 */
+/*! core engine; version: 20130909 */
 ;(function($) {
 "use strict";
 
-var version = '20131003';
+var version = '20130725';
 
 $.fn.cycle = function( options ) {
     // fix mistakes with the ready state
@@ -138,7 +138,7 @@ $.fn.cycle.API = {
 
         // stage initial transition
         if ( opts.timeout ) {
-            slideOpts = opts.API.getSlideOpts( opts.currSlide );
+            slideOpts = opts.API.getSlideOpts( opts.nextSlide );
             opts.API.queueTransition( slideOpts, slideOpts.timeout + opts.delay );
         }
 

@@ -14,3 +14,133 @@
 	&:focus
 		background: #fff
 		border-color: transparent  
+		
+.tab
+	background: #f0f0f1
+	border: 1px solid #e1e2e9
+	border-bottom: 0
+	+clr
+.tab__item
+	float: left
+	height: 47px
+	line-height: 47px
+.tab__link,
+.tab__title
+	display: block
+	padding: 0 30px 
+	min-width: 61px
+	color: $violet 
+	font-size: 16px
+	text-align: center
+	border-right: 1px solid #e1e2e9
+	&.is-active
+		position: relative
+		z-index: 2
+		background: #fff
+		border-bottom: 1px solid #fff
+.tab__title
+	font-weight: bold
+	color: #000
+.box
+	position: relative
+	border: 1px solid #e1e2e9
+	width: 1024px
+	margin-left: -16px
+	background: #fff
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: -16px
+	&:before
+		left: 0
+		+arr(16,16,#687584,br)
+	&:after
+		right: 0
+		+arr(16,16,#687584,bl)
+	 
+.item
+	float: left
+	padding: 18px 24px 27px 32px
+	width: 200px
+	background: #fff 
+	color: $blue
+	a
+		color: $blue 
+	.item__price
+		color: #62687e
+.item__top
+	height: 50px
+	overflow: hidden
+.item__title
+	max-height: 35px
+	overflow: hidden
+	line-height: 1.1
+	font-size: 16px
+	font-weight: bold
+.item__brand
+	font-weight: normal 
+.item__img
+	display: block
+	margin-bottom: 14px
+	text-align: center
+	height: 175px
+	line-height: 175px
+	overflow: hidden
+	&:hover
+		img
+			+opacity(.8)
+	img
+		max-width: 100%
+		height: auto
+		vertical-align: middle
+		+transition(opacity .2s linear)
+.item__price
+	display: inline-block
+	position: relative
+	color: #62687e
+	&:after
+		content: ""
+		position: absolute
+		right: -33px
+		top: -6px
+		+s(to-basket) 
+	strong
+		font-size: 16px
+	&.is-no-basket
+		&:after
+			display: none		
+
+.slider
+	.item
+		height: 258px
+
+.pager
+	margin-bottom: 19px
+	font-size: 0
+	text-align: center
+	button
+		position: relative 
+		margin-left: 16px
+		border: 1px solid $violet_dark
+		width: 14px
+		height: 14px
+		background: #fff 
+		+border-radius(50%)
+		&:first-child
+			margin-left: 0
+		&.is-active
+			&:before
+				content: ""
+				position: absolute
+				left: 50%
+				top: 50%
+				margin: -4px 0 0 -4px
+				width: 8px
+				height: 8px  
+				+border-radius(50%) 
+				background: $violet_dark
+			&:hover
+				+box-shadow(none)
+		&:hover
+			+box-shadow(0 0 0 6px $violet_dark)
