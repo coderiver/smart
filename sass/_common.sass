@@ -205,10 +205,15 @@ a
 		float: left
 		width: 152px
 		background: #ebebeb url(../img/glass.png) 10px 50% no-repeat
+		&:hover
+			background: #fff url(../img/glass.png) 10px 50% no-repeat
+		&:focus
+			&:hover
+				background: #fff 
 .search__submit
 	float: left
 	width: 77px 
-	height: 34px
+	height: 32px
 	font-size: 16px
 	color: #fff 
 	background: #62687e 
@@ -220,8 +225,8 @@ a
 	height: 32px
 	line-height: 32px
 	background: #363d55 
-	+box
-	a
+	color: #c7ccdc 
+	a,span
 		display: inline-block
 		margin-right: 10px
 		color: #c7ccdc 

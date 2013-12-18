@@ -14,6 +14,8 @@
 	&:focus
 		background: #fff
 		border-color: transparent  
+	&:hover
+		background: #fff 
 		
 .tab-wrap
 	height: 447px
@@ -122,7 +124,20 @@
 		font-size: 16px
 	&.is-no-basket
 		&:after
-			display: none		
+			display: none	
+	&.is-active
+		&:after
+			+s(to-basket-h)
+.item__quant
+	position: absolute
+	right: -31px
+	top: 1px
+	z-index: 2
+	width: 16px
+	text-align: center
+	font-size: 10px
+	font-style: normal
+	color: #fff 
 
 .slider
 	.item
@@ -157,3 +172,200 @@
 				+box-shadow(none)
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
+.page-top
+	padding: 0 18px 0 28px
+	background: #f0f0f1  
+	.page-title,
+	.pagin,
+	.select
+		display: inline-block
+		vertical-align: middle
+	.page-title
+		width: 215px
+		margin-right: 9px
+	.select
+		width: 228px
+		margin-left: 44px
+.page-title
+	color: #000
+	font-size: 16px 
+.pagin
+	height: 46px
+	line-height: 46px
+	color: #818181
+	font-size: 0
+	.pagin__title, a
+		display: inline-block
+		vertical-align: middle
+	a
+		margin-right: -1px
+		width: 46px
+		height: 46px
+		font-size: 16px
+		text-align: center
+		border-left: 1px solid #dfe1e8
+		border-right: 1px solid #dfe1e8
+		&:hover
+			background: #e7e7e9 
+		&.is-active
+			padding: 0 15px
+			font-weight: bold
+			color: #818181
+			width: auto
+			background: #fff 
+			span
+				display: inline-block
+				margin-right: 5px
+	span
+		display: none
+.pagin__title
+	margin-right: 15px
+	font-size: 12px
+.pagin__more
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -6px 0 0 -4px
+		+s(arr1)
+
+.select
+	position: relative
+	cursor: pointer
+	font-size: 12px
+	&.is-active
+		.select__text
+			&:after
+				+rotate(-180)
+.select__text
+	position: relative
+	display: block
+	padding: 0 25px 0 11px 
+	height: 30px
+	line-height: 30px
+	border: 1px solid #dfe1e8
+	+unselectable
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	&:after
+		content: ""
+		position: absolute
+		right: 15px
+		top: 50%
+		margin-top: -2px
+		+s(arr2)
+		+rotate(0)
+		+transition(transform .1s linear)
+.select__list
+	position: absolute
+	display: none
+	left: 0
+	right: 0
+	top: 31px
+	z-index: 100
+	border: 1px solid #dfe1e8
+	border-top: 0 
+	background: #fff
+	li
+		padding: 5px 11px 
+		cursor: pointer
+		&:hover
+			background: #717791
+			color: #fff 
+	
+.colors-wrap
+	margin-bottom: 20px
+	font-size: 0	
+.color
+	display: inline-block
+	vertical-align: middle
+	margin: 0 8px
+	width: 16px
+	height: 16px
+	+box
+	border-width: 3px
+	border-style: solid 
+	background: #fff 
+	+border-radius(50%)
+	&.is-white
+		border: 1px solid $violet
+	&.is-black
+		border-color: #000
+		&:hover
+			background: #000
+	&.is-red
+		border-color: #e03a3a
+		&:hover
+			background: #e03a3a
+	&.is-yellow
+		border-color: #fab32b
+		&:hover
+			background: #fab32b
+	&.is-blue
+		border-color: #56b7fb
+		&:hover
+			background: #56b7fb
+	&.is-active
+		position: relative
+		margin: 0 8px 
+		width: 28px
+		height: 28px
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -5px 0 0 -7px
+			+s(arr3)
+		&.is-white
+			background: #fff 
+		&.is-black
+			background: #000
+		&.is-red
+			background: #e03a3a
+		&.is-yellow
+			background: #fab32b
+		&.is-blue
+			background: #56b7fb
+			
+.checkbox-wrap
+	display: block
+.checkbox
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		left: 0
+		top: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			+ span
+				+unselectable
+				&:after
+					content: ""
+					position: absolute
+					top: 3px
+					left: 2px
+					+s(check)
+				&:before
+					background: #fff 
+	span
+		position: relative
+		padding-left: 28px
+		left: 0
+		top: 0
+		font-size: 12px
+		color: $violet 
+		&:before
+			content: ""
+			position: absolute 
+			left: 0
+			top: 0
+			width: 14px
+			height: 14px
+			border: 1px solid #e8e9ed
+			background: #f0f0f1
