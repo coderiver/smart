@@ -90,5 +90,46 @@ $(document).ready(function() {
             pager: pager,
         });
     });
+
+
+    function accordion() {
+        $(".js-accordion-list").hide();
+        $(".js-accordion-title").click(function(){
+            $(this).toggleClass("is-active");
+            $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+        });
+    }
+    accordion();
+
+    function ui_slider() {
+        $(".js-ui-slider").each(function(){
+            var slider = $(this).find(".js-ui-slider-main");
+            var from = $(this).find(".js-ui-slider-from");
+            var input_from = $(this).find(".js-ui-slider-from-input");
+            var to = $(this).find(".js-ui-slider-to");
+            var input_to = $(this).find(".js-ui-slider-to-input");
+            slider.slider({
+                range: true,
+                min: 0,
+                max: 5000,
+                step: 100,
+                values: [ 100, 4000 ],
+                slide: function( event, ui ) {
+                    from.text(ui.values[0]);
+                    input_from.val(ui.values[0]);
+                    to.text(ui.values[1]);
+                    input_to.val(ui.values[1]);
+                }
+            });
+            from.text(slider.slider( "values", 0 ));
+            input_from.val(slider.slider( "values", 0 ));
+            to.text(slider.slider( "values", 1 ));
+            input_to.val(slider.slider( "values", 1 ));
+
+            slider.find(".ui-slider-range").next().addClass("is-from");
+            slider.find(".ui-slider-range").next().next().addClass("is-to");
+        });
+    }
+    ui_slider();
 	
 });

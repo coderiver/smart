@@ -1,0 +1,57 @@
+.filter
+	padding: 15px 
+	width: 100%
+	+box
+	color: $violet 
+	&:after
+		display: none
+	.checkbox-wrap
+		margin-bottom: 8px
+	.select
+		margin-bottom: 20px
+	.cancel-link
+		margin-bottom: 14px
+	.colors-wrap
+
+.filter__item
+	margin-bottom: 18px
+.filter__title
+	position: relative
+	margin-bottom: 11px
+	font-size: 16px
+	font-weight: bold  
+	cursor: pointer
+	+unselectable
+	&:after
+		content: ""
+		position: absolute
+		top: 2px
+		right: 0
+		+s(plus)   
+	&.is-active
+		&:after
+			top: 8px
+			+s(minus)
+.cancel-link
+	position: relative
+	padding-right: 18px
+	display: inline-block
+	color: $blue 
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		top: 4px
+		+s(del) 
+.colors-wrap_vertical
+	li
+		margin-bottom: 8px
+	.color
+		margin: 0 12px 0 0 
+	.is-active
+		width: 16px
+		height: 16px
+	a
+		font-size: 12px
+		display: inline-block
+		vertical-align: middle

@@ -1,0 +1,59 @@
+.ui-slider-wrap
+	padding-bottom: 29px
+.ui-widget-content
+	position: relative
+	height: 4px
+	background: #cacdd8
+.ui-slider-handle
+	position: absolute
+	z-index: 2
+	top: 50%
+	margin-top: -16px
+	width: 18px
+	height: 32px
+	background: #62687e 
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		margin-top: -7px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+	&.is-from
+		margin-left: 0
+		&:before
+			right: -14px
+			+arr(14,32,#62687e,r)
+		&:after
+			left: 15px
+			+s(arr4)
+	&.is-to
+		margin-left: -18px
+		&:before
+			left: -14px
+			+arr(14,32,#62687e,l)
+		&:after
+			right: 15px
+			+s(arr5)
+	
+
+
+.ui-slider-range
+	position: absolute
+	z-index: 1
+	top: 0
+	height: 4px
+	background: #62687e
+
+.ui-slider__top
+	padding-left: 22px
+	margin-bottom: 25px
+	font-weight: bold
+	span, strong
+		display: inline-block
+		vertical-align: middle
+	strong
+		font-size: 16px
+.ui-slider-main

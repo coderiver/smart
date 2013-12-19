@@ -9,6 +9,7 @@
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery.cycle2.js"></script>
 	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery.raty.js"></script>
 	<script src="js/common.js"></script>
@@ -141,7 +142,195 @@
                 </ul>
             </div>
 		</div>
-		<div class="l-col1"></div>
+		<div class="l-col1">
+			<div class="box filter">
+				<div class="select js-select">
+	                <span class="select__text js-select-text">показываем все</span>
+	                <input type="hidden" class="js-select-input" value="">
+	                <ul class="select__list js-select-list">
+	                    <li data-id="0">показываем все</li>
+	                    <li data-id="1">var2</li>
+	                    <li data-id="2">var3</li>
+	                    <li data-id="3">var4</li>
+	                </ul>
+	            </div>
+	            <a href="#" class="cancel-link">Сбросить условия поиска</a>
+                <div class="filter__item js-accordion">
+                    <div class="filter__title js-accordion-title">Марка</div>
+                    <div class="filter__body js-accordion-list">
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Apple</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Alcatel</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Asus</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>BlackBerry</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>HTC</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>LG Electronics</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Motorola</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Nokia</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Samsung</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Sony</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item js-accordion">
+                    <div class="filter__title js-accordion-title">Особенности</div>
+                    <div class="filter__body js-accordion-list">
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Социальные сети</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Игры</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Камера и видео</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Музыка</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Email</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Бизнес</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Приложения</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>Тачскрин</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>С клавиатурой</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-wrap">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span>4G</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item js-accordion">
+                    <div class="filter__title js-accordion-title">Цена</div>
+                    <div class="filter__body js-accordion-list" style="display:block">
+                    	<div class="ui-slider-wrap js-ui-slider">
+                            <div class="ui-slider__top">
+                                <span>от</span>
+                                <strong type="text" class="js-ui-slider-from"></strong>
+                                <span>до</span>
+                                <strong type="text" class="js-ui-slider-to"></strong>
+                                <input type="hidden" class="js-ui-slider-from-input">
+                                <input type="hidden" class="js-ui-slider-to-input">
+                            </div>
+                            <div class="js-ui-slider-main"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item js-accordion">
+                    <div class="filter__title js-accordion-title">Цвета</div>
+                    <div class="filter__body js-accordion-list">
+                    	<ul class="colors-wrap colors-wrap_vertical">
+		    				<li>
+		    					<a href="#" class="color is-white"></a>
+		    					<a href="#">Белый</a>
+		    				</li>
+		    				<li>
+		    					<a href="#" class="color is-black is-active"></a>
+		    					<a href="#">Черный</a>
+		    				</li>
+		    				<li>
+		    					<a href="#" class="color is-red"></a>
+		    					<a href="#">Красный</a>
+		    				</li>
+		    				<li>
+		    					<a href="#" class="color is-yellow"></a>
+		    					<a href="#">Желтый</a>
+		    				</li>
+		    				<li>
+		    					<a href="#" class="color is-blue"></a>
+		    					<a href="#">Синий</a>
+		    				</li>
+		    			</ul>
+                    </div>
+                </div>
+                <div class="box__line"></div>
+			</div>
+		</div>
 		<div class="l-col2">
 			<div class="catalog-wrap">
 				<div class="item item_catalog">
@@ -312,6 +501,14 @@
                         </label>
                     </div>
 	    		</div>
+			</div>
+			<div class="pagin pagin_bottom">
+				<div class="pagin__title">1-15 из 40 вариантов</div>
+				<a href="#" class="is-active"><span>страница</span>1</a>
+				<a href="#"><span>страница</span> 2</a>
+				<a href="#"><span>страница</span> 3</a>
+				<a href="#"><span>страница</span> 4</a>
+				<a href="#" class="pagin__more"></a>
 			</div>
 		</div>
 	</div>

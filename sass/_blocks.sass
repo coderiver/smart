@@ -50,7 +50,7 @@
 	color: #000
 .box
 	position: relative
-	border: 1px solid #e1e2e9
+	border: 1px solid $border
 	width: 1024px
 	margin-left: -16px
 	background: #fff
@@ -203,8 +203,8 @@
 		height: 46px
 		font-size: 16px
 		text-align: center
-		border-left: 1px solid #dfe1e8
-		border-right: 1px solid #dfe1e8
+		border-left: 1px solid $border
+		border-right: 1px solid $border
 		&:hover
 			background: #e7e7e9 
 		&.is-active
@@ -231,6 +231,9 @@
 		margin: -6px 0 0 -4px
 		+s(arr1)
 
+.pagin_bottom
+	margin-left: 32px
+
 .select
 	position: relative
 	cursor: pointer
@@ -245,7 +248,7 @@
 	padding: 0 25px 0 11px 
 	height: 30px
 	line-height: 30px
-	border: 1px solid #dfe1e8
+	border: 1px solid $border
 	+unselectable
 	white-space: nowrap
 	overflow: hidden
@@ -367,5 +370,5 @@
 			top: 0
 			width: 14px
 			height: 14px
-			border: 1px solid #e8e9ed
+			border: 1px solid $border
 			background: #f0f0f1
