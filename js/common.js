@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     function select() {
         $(".js-select").each(function(){
-            var select_list = $(this).parent().find(".js-select-list");
+            var select_list = $(this).find(".js-select-list");
             var text = select_list.find("li").first().text();
             $(this).find(".js-select-text").text(text);
             $(this).click(function(event){

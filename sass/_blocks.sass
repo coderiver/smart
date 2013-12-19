@@ -139,6 +139,25 @@
 	font-style: normal
 	color: #fff 
 
+.price
+	display: inline-block
+	position: relative
+	color: #62687e
+	&:after
+		content: ""
+		position: absolute
+		right: -33px
+		top: -6px
+		+s(to-basket) 
+	strong
+		font-size: 16px
+	&.is-no-basket
+		&:after
+			display: none	
+	&.is-active
+		&:after
+			+s(to-basket-h)
+
 .slider
 	.item
 		height: 258px
@@ -173,7 +192,9 @@
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
 .page-top
-	padding: 0 18px 0 28px
+	padding: 0 0 0 28px
+	height: 46px
+	line-height: 46px
 	background: #f0f0f1  
 	.page-title,
 	.pagin,
@@ -186,6 +207,14 @@
 	.select
 		width: 228px
 		margin-left: 44px
+	.select_m
+		margin: 0 8px 0 0 
+		width: 210px
+	.page-title
+		margin: 0
+		width: 193px
+	.pagin_right
+		float: right
 .page-title
 	color: #000
 	font-size: 16px 
@@ -233,7 +262,9 @@
 
 .pagin_bottom
 	margin-left: 32px
-
+	.is-active
+		border-top: 1px solid #fff
+		margin-top: -1px 
 .select
 	position: relative
 	cursor: pointer
@@ -275,6 +306,7 @@
 	li
 		padding: 5px 11px 
 		cursor: pointer
+		line-height: 1
 		&:hover
 			background: #717791
 			color: #fff 
