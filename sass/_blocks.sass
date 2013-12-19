@@ -51,6 +51,7 @@
 .box
 	position: relative
 	border: 1px solid $border
+	clear: both
 	width: 1024px
 	margin-left: -16px
 	background: #fff
@@ -157,6 +158,9 @@
 	&.is-active
 		&:after
 			+s(to-basket-h)
+.price__title
+	display: inline-block
+	margin-right: 10px
 
 .slider
 	.item
@@ -195,6 +199,7 @@
 	padding: 0 0 0 28px
 	height: 46px
 	line-height: 46px
+	clear: both
 	background: #f0f0f1  
 	.page-title,
 	.pagin,
@@ -215,6 +220,10 @@
 		width: 193px
 	.pagin_right
 		float: right
+	.print-link
+		float: right
+		margin: 17px 25px 0 0
+		line-height: 1
 .page-title
 	color: #000
 	font-size: 16px 
@@ -379,6 +388,7 @@
 		opacity: 0
 		&:checked
 			+ span
+				color: $blue 
 				+unselectable
 				&:after
 					content: ""
@@ -404,3 +414,100 @@
 			height: 14px
 			border: 1px solid $border
 			background: #f0f0f1
+			
+.choose
+	font-size: 0
+.choose__plus,
+.choose__minus
+	position: relative
+	width: 16px
+	height: 16px
+	background: #4e6aad 
+	display: inline-block
+	vertical-align: middle
+.choose__plus
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -4px 0 0 -4px 
+		+s(plus-s)
+.choose__minus
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -1px 0 0 -4px 
+		+s(minus-s)
+.choose__input
+	display: inline-block
+	margin: 0 8px 
+	vertical-align: middle
+	width: 38px
+	height: 30px
+	background: #fff
+	font-size: 12px
+	text-align: center
+	color: $violet 
+	border: 1px solid #aeaeae 
+	
+.item-row
+	position: relative
+	padding: 16px 31px 16px 10px 
+	border-top: 1px solid #cacdd8 
+	+clr
+	a
+		color: $blue 
+	.close
+		position: absolute
+		top: 18px
+		right: 24px
+	&:first-child
+		border-top: 0
+.item-row_action
+	position: relative
+	z-index: 2
+	border-top: 1px dashed $border 
+.item-row__img
+	float: left
+	width: 155px
+	margin-right: 10px
+	text-align: center 
+	img
+		max-width: 100%
+		height: auto
+.item-row__main
+	overflow: hidden
+	padding-bottom: 1px
+.item-row__title
+	font-size: 16px 
+.item-row__brand
+	color: $blue
+	font-size: 12px
+	font-weight: normal  
+.item-row__descr
+	margin: 16px 0
+.item-row__action
+	.choose
+		float: left
+	.price
+		float: right
+		margin-top: 6px
+		color: $violet 
+
+.close
+	width: 16px
+	height: 16px
+	background: $blue
+	+border-radius(50%) 
+	font-size: 0
+	i
+		display: inline-block
+		vertical-align: middle
+		+s(close)
+	&:hover
+		+opacity(.9)
+	&:active 
+		margin-top: 1px

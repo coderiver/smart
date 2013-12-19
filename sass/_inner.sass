@@ -1,0 +1,73 @@
+.main
+	width: 100%
+	+box
+	+clr
+	background: #fff 
+	border-left: 1px solid $border
+	border-bottom: 1px solid $border
+.item_catalog
+	margin: -1px -1px 0 0
+	padding: 18px 24px 25px 32px 
+	border-top: 1px solid #dfe1e8 
+	.item__top
+		height: 64px
+	.item__img
+		margin-bottom: 5px
+		height: 300px
+		line-height: 300px
+	.item__brand
+		margin-bottom: 10px
+	.item__price
+		margin-left: 26px
+	.checkbox-wrap
+		margin-top: 17px  
+
+.contract
+	padding: 19px 0 23px
+	border-bottom: 1px solid $border 
+	&:last-child
+		border-bottom: 0
+	a
+		color: $blue 
+.contract__title
+	line-height: 1
+	font-size: 16px
+.contract__wrap
+	padding: 0 32px 
+.contract__brand
+	color: $blue
+	font-size: 12px 
+.contract__img
+	display: block
+	margin-top: 13px
+	img
+		display: block
+		margin: 0 auto 
+.contract__descr
+	padding: 17px 32px 0
+	font-size: 12px
+	p
+		margin-bottom: 19px 
+.contract__action
+	+clr
+	.price
+		margin-right: 32px
+		float: right
+		color: #000 
+		
+.print-link
+	position: relative
+	padding-right: 26px
+	font-size: 8px
+	text-transform: uppercase
+	color: #62687e 
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		top: -5px
+		+s(print) 
+
+.box_small
+	width: 100%
+	+box

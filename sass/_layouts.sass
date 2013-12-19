@@ -5,9 +5,22 @@
 	width: 992px
 	background: #f0f0f1 
 	border: 1px solid #dfe1e8
-	.l-col1
-		float: left
-		width: 223px
-	.l-col2
-		float: right
-		width: 768px
+.l-main_height
+	padding-bottom: 65px
+.l-col1
+	float: left
+	width: 223px
+.l-col2
+	float: right
+	width: 768px
+.l-col1_right
+	float: right
+	.box_small
+		&:before
+			display: none
+.l-col2_left
+	float: left
+	.main
+		border-left: 0
+		border-right: 1px solid $border 
+		border-top: 1px solid $border 
