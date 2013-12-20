@@ -202,15 +202,26 @@ a
 	float: left
 	padding: 8px 8px 0
 	+clr
-	.input
-		float: left
-		width: 152px
-		background: #ebebeb url(../img/glass.png) 10px 50% no-repeat
-		&:hover
-			background: #fff url(../img/glass.png) 10px 50% no-repeat
-		&:focus
-			&:hover
-				background: #fff 
+	.search__input
+		
+.search__input
+	display: block
+	float: left
+	width: 152px
+	padding: 0 7px 
+	height: 32px
+	+box
+	font: normal 12px Arial,sans-serif
+	background: #ebebeb 
+	border-top: 1px solid #4f4d4e
+	border-left: 1px solid #89888a
+	border-bottom: 1px solid #f4f4f4   
+	border-right: 1px solid #f4f4f4 
+	background: #ebebeb url(../img/glass.png) 10px 50% no-repeat
+	&:hover
+		background: #fff url(../img/glass.png) 10px 50% no-repeat
+	&:focus
+		background: #fff 
 .search__submit
 	float: left
 	width: 77px 
