@@ -53,23 +53,24 @@
 	border: 1px solid $border
 	clear: both
 	width: 1024px
+	+box
 	margin-left: -16px
 	background: #fff
 	&:before,
 	&:after
 		content: ""
 		position: absolute
-		top: -16px
+		top: -15px
 	&:before
 		left: 0
-		+arr(16,16,#687584,br)
+		+arr(15,15,#687584,br)
 	&:after
 		right: 0
-		+arr(16,16,#687584,bl)
+		+arr(15,15,#687584,bl)
 .box__line
 	position: absolute
 	left: 14px
-	right: 16px
+	right: 14px
 	bottom: -16px
 	height: 16px
 	background: #000
@@ -77,7 +78,7 @@
 	 
 .item
 	float: left
-	padding: 18px 24px 27px 32px
+	padding: 18px 23px 27px 32px
 	width: 200px
 	background: #fff 
 	color: $blue
@@ -158,6 +159,10 @@
 	&.is-active
 		&:after
 			+s(to-basket-h)
+.price_big
+	font-size: 24px
+	strong
+		font-size: 30px 
 .price__title
 	display: inline-block
 	margin-right: 10px
@@ -511,3 +516,24 @@
 		+opacity(.9)
 	&:active 
 		margin-top: 1px
+		
+.btn
+	display: inline-block
+	padding: 18px 50px 14px
+	font-size: 16px
+	color: #fff
+	line-height: 1
+	background: #eb6014 
+	font-weight: bold 
+	+transition(background .2s linear)
+	&:hover
+		background: #f33a0c 
+	&:active
+		position: relative
+		top: 2px
+		background: #d70000 
+
+.rules-text
+	font-size: 10px
+	a
+		color: $blue 

@@ -61,3 +61,53 @@
 		font-size: 12px
 		display: inline-block
 		vertical-align: middle
+		
+.sidebar
+	.box_small
+		margin-bottom: 20px
+.box_small
+	position: relative
+	right: -16px
+	margin-left: 0 
+	padding: 15px 20px 15px 20px 
+	width: 100%
+	+box
+       
+.sidebar__title
+	font-size: 16px
+	color: $violet
+	font-weight: bold 
+	
+.to-center
+	text-align: center
+
+.sidebar__wrap
+	padding: 10px 32px 
+.sidebar__item
+	margin-bottom: 20px
+	.rules-text 
+		span
+			display: block
+			font-size: 20px
+			
+.payment
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle
+		margin: 20px 8px 0 0
+		width: 40px
+	span
+		display: block
+.payment__mc
+	+s(pay-mc)
+.payment__visa
+	+s(pay-visa1)
+.payment__visa-d
+	+s(pay-visa2) 
+.payment__wm
+	+s(pay-wm)
+.payment__ym
+	+s(pay-ym) 
+.payment__qiwi  
+	+s(pay-qiwi)   
