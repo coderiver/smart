@@ -229,6 +229,8 @@
 		float: right
 		margin: 17px 25px 0 0
 		line-height: 1
+	.page-title_width
+		width: auto
 .page-title
 	color: #000
 	font-size: 16px 
@@ -460,7 +462,7 @@
 	
 .item-row
 	position: relative
-	padding: 16px 31px 16px 10px 
+	padding: 16px 0 16px 10px 
 	border-top: 1px solid #cacdd8 
 	+clr
 	a
@@ -485,7 +487,7 @@
 		height: auto
 .item-row__main
 	overflow: hidden
-	padding-bottom: 1px
+	padding: 0 32px 1px 0
 .item-row__title
 	font-size: 16px 
 .item-row__brand
@@ -495,12 +497,16 @@
 .item-row__descr
 	margin: 16px 0
 .item-row__action
-	.choose
+	.choose,
+	.colors-wrap
 		float: left
 	.price
 		float: right
 		margin-top: 6px
 		color: $violet 
+.item-row_search
+	.price
+		margin-right: 25px
 
 .close
 	width: 16px
