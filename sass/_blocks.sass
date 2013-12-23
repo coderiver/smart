@@ -1,13 +1,13 @@
 .input-wrap
 	margin-bottom: 16px
-	&.is-valid-error
-		.input
-			border-color: #b30a00
-	&.is-valid-ok
-		.input
-			border-color: #70ca00
 	a
-		color: $blue 
+		color: $blue
+.is-valid-error
+	.input
+		border-color: #b30a00
+.is-valid-ok
+	.input
+		border-color: #70ca00
 .input
 	display: block
 	padding: 0 15px 
@@ -19,13 +19,17 @@
 	background: #fff 
 	border: 1px solid #aeaeae
 	color: $violet 
-	//+transition(all .1s linear)  
+	+transition(all .1s linear)  
 	&:focus
 		border-color: #666  
 		&:hover
 			border-color: #666 
 	&:hover
 		border-color: #999  
+.input_s
+	width: 64px
+		
+
 .tab-wrap
 	height: 447px
 	background: #f0f0f1 	
