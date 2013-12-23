@@ -224,3 +224,22 @@
 .order-info__title
 	font-size: 16px
 	font-weight: bold
+
+.breadcrumbs
+	a,span
+		position: relative
+		margin-right: 21px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			left: -15px
+			margin-top: -3px
+			+s(arr6) 
+		&:first-child
+			&:before
+				display: none
+
+.article
+	padding: 32px
