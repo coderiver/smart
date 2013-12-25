@@ -162,5 +162,12 @@ $(document).ready(function() {
         });
     }
     choose();
+
+
+    $(".js-prod-gallery a").click(function(){
+        var url = $(this).attr("href");
+        $(this).parent().find(".product__img-big img").attr("src", url);
+        return false;
+    });
     
 });

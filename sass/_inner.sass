@@ -198,7 +198,7 @@
 .payment-wrap
 	padding: 0 32px 
 	font-size: 0
-.payment
+.pay
 	display: inline-block
 	margin: 0 0 33px 63px
 	border: 1px solid #829192
@@ -243,3 +243,155 @@
 
 .article
 	padding: 32px
+	+clr
+	p
+		margin-bottom: 17px
+	img
+		float: right
+		margin-left: 100px
+.article__title
+	font-size: 16px
+	color: #000 
+	font-weight: bold
+.article__brand
+	display: block
+	margin-bottom: 20px
+	
+.product
+	position: relative
+	border: 1px solid $border
+	padding: 38px 32px 128px
+	+clr
+	+background-image(radial-gradient(center center, 549px 549px, #fff 0%, #cacfe0 100%))
+	a
+		color: $blue 
+	.rate
+		margin: 6px 0 23px
+	.print-link
+		display: inline-block
+		margin-bottom: 15px
+	.box_left
+		position: relative
+		left: -32px  
+	.box_right
+		margin: 48px 0 0
+	.tab-cont
+		padding: 17px 32px 30px
+	.wrap
+		clear: both
+.product__info
+	line-height: 1.4
+.product__add-info
+	padding-left: 145px
+	.banner
+		img
+			display: block
+.product__title
+	color: #000 
+	font-size: 30px
+	font-weight: bold
+	line-height: 1 
+.product__brand
+	display: block
+	margin-bottom: 15px
+	color: #000 
+.to-right
+	text-align: right
+.box_left
+	&:after
+		display: none
+.box_right
+	&:before
+		display: none
+.box_half
+	width: 512px
+	+box
+.tab-cont__title
+	font-weight: bold
+	font-size: 16px
+	
+.prod-var
+	margin: 12px 0 
+	.price
+		padding: 6px 42px 6px 10px
+		&:after
+			top: 50%
+			margin-top: -13px
+			right: 10px
+	.is-active
+		.price
+			color: #fff 
+			background: #eb6014 
+			&:after
+				+s(to-basket-w)
+	.price__quant
+		position: absolute
+		top: 10px
+		right: 12px
+		width: 16px
+		text-align: center
+		color: #fff
+		font-size: 10px 
+		font-style: normal
+.product__bottom
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	height: 128px
+	+box
+	padding: 45px 32px 0
+	+clr
+	.colors-wrap
+		float: left
+		position: relative
+		z-index: 2
+	.checkbox
+		position: relative
+		z-index: 2
+		margin: 36px 43px 0 0
+		float: right
+	.nav
+		float: none
+		display: inline-block
+		background: #62687e 
+	.nav__link
+		width: 103px
+		color: #fff 
+	.to-center
+		position: absolute
+		bottom: -1px
+		left: 0
+		right: 0
+		clear: both
+		text-align: center
+		font-size: 0
+.colors-wrap__title
+	margin-bottom: 13px
+	font-size: 8px
+	text-transform: uppercase
+.product__gallery
+	position: absolute
+	bottom: 63px
+	z-index: 2
+	left: 0
+	right: 0
+	height: 80px
+	text-align: center
+.product__img
+	width: 60px
+.product__img-big,
+.product__img
+	vertical-align: top
+	display: inline-block
+	text-align: center
+.product__img-big
+	position: relative
+	width: 270px
+	height: 80px
+	text-align: center
+	div
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 14px

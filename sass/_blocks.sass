@@ -38,6 +38,7 @@
 		border: 0
 .tab
 	background: #f0f0f1
+	height: 47px
 	border: 1px solid #e1e2e9
 	+clr
 .tab__item
@@ -71,9 +72,19 @@
 .tab__title
 	font-weight: bold
 	color: #000
+.tab_img
+	.tab__link
+		padding: 0
+		width: 63px
+		text-align: center
+	img
+		vertical-align: middle
+
+
 .box
 	position: relative
 	border: 1px solid $border
+	border-top: 0
 	clear: both
 	width: 1024px
 	+box
@@ -90,6 +101,9 @@
 	&:after
 		right: 0
 		+arr(15,15,#687584,bl)
+	.tab
+		border-width: 0
+		border-bottom-width: 1px
 .box__line
 	position: absolute
 	left: 14px
@@ -184,7 +198,7 @@
 			+s(to-basket-h)
 .price_big
 	font-size: 24px
-	strong
+	strong 
 		font-size: 30px 
 .price__title
 	display: inline-block
