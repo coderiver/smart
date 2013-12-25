@@ -395,3 +395,88 @@
 		left: 0
 		right: 0
 		bottom: 14px
+		
+.sibebar-nav
+	padding: 0 32px 
+	a
+		color: #62687e
+	
+.item_compare
+	position: relative
+	padding-bottom: 0
+	&:hover
+		.close
+			display: block
+	.close
+		display: none
+		position: absolute
+		top: 19px
+		right: 10px
+	.item__img
+		line-height: 1
+		height: auto
+		margin-bottom: 0
+.compare
+	padding: 18px 0 
+	border-top: 1px solid $border
+	&:first-child
+		border-top: 0
+.compare__title
+	position: relative
+	padding: 0 32px 
+	font-size: 16px
+	font-weight: bold
+	cursor: pointer
+	+unselectable
+	&:after
+		content: ""
+		position: absolute
+		top: 2px
+		right: 17px
+		+s(plus)   
+	&.is-active
+		&:after
+			top: 8px
+			+s(minus)
+
+.compare__list
+.compare__item
+	padding: 6px 32px
+	font-size: 0
+	+clr
+	&:hover
+		background: #ebf9fa 
+.compare__main
+	padding-top: 10px
+.compare__col
+	display: inline-block
+	width: 25%
+	font-size: 12px
+	vertical-align: top
+	+box
+	.price
+		margin-right: 50px
+	.colors-wrap
+		margin-bottom: 0  
+.icon-not
+	display: inline-block
+	+s(no)  
+.icon-yes
+	display: inline-block
+	+s(yes)          
+	
+.item__img-empty
+	display: block
+	margin: 0 auto 
+	width: 140px
+	height: 78px 
+	background: #edf0f7
+	+border-radius(10px 10px 0 0)
+	border: 2px dashed $border 
+	border-bottom: 0
+	span
+		display: block
+		width: 108px
+		height: 64px
+		margin: 13px auto 0
+		border: 1px solid $border 
