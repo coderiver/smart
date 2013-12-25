@@ -95,8 +95,17 @@ $(document).ready(function() {
     function accordion() {
         $(".js-accordion-list").hide();
         $(".js-accordion-title").click(function(){
-            $(this).toggleClass("is-active");
-            $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            if ($(this).parent().hasClass("js-one-active")) {
+                $(".js-accordion-title").removeClass("is-active");
+                $(".js-accordion-list").slideUp("fast");
+                $(this).toggleClass("is-active");
+                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            }
+            else {
+                $(this).toggleClass("is-active");
+                $(this).parents(".js-accordion").find(".js-accordion-list").slideToggle("fast");
+            }
+            
         });
     }
     accordion();
@@ -177,5 +186,34 @@ $(document).ready(function() {
         });
     }
     simpleGallery();
+
+    $(".js-tooltip-text").hide();
+    var tooltip = $(".js-tooltip");
+    tooltip.hover(
+        function(){
+            $(this).show();
+        },
+        function() {
+            $(this).hide()
+        }
+    );
+    $(".js-with-tooltip").hover(
+        function(){
+            var left = $(this).offset().left;
+            var bottom = $(window).height() - $(this).offset().top + 15
+            var html = $(this).find(".js-tooltip-text").html();
+            tooltip.children(".tooltip__wrap").html(html); 
+            tooltip.css({
+                left: left,
+                bottom: bottom
+            });
+           
+            //console.log(position);
+            tooltip.fadeIn("fast");
+        },
+        function() {
+            tooltip.hide()
+        }
+    );
     
 });

@@ -25,8 +25,8 @@
     +box-shadow(-16px 16px 0 rgba(0,0,0,.2))
     .close
         position: absolute
-        top: 17px
-        right: 32px
+        top: 16px
+        right: 16px
 .popup_view
     width: 592px
     .item
@@ -101,7 +101,10 @@
     color: $blue 
 .popup__brand
     color: $blue 
-    
+.popup__main-title
+    color: #000
+    font-size: 16px
+    font-weight: bold 
 .gallery
     +clr
 .gallery__left
@@ -173,3 +176,59 @@
         background: #d2d2d2 
         &:after
             +s(pause) 
+
+.popup_steps
+    border: 1px solid $border
+    width: 512px
+    height: 448px
+    .steps-wrap
+        margin: 0
+    .field__main
+        width: 208px
+    .payment-wrap
+        padding: 0
+    .pay
+        margin: 0 0 17px 31px
+        &:first-child, 
+        &:nth-child(4n)
+            margin-left: 0
+    .order-info
+        padding: 0
+        .btn_right
+            float: right
+            margin-top: 15px
+    .accord
+        padding: 0
+    .print-link
+        top: -15px
+.popup_auto-height
+    top: 100px
+    bottom: auto
+    height: auto
+    
+.popup_descr
+    width: 520px
+    height: 470px
+    +clr
+    .item
+        border: 0
+        margin-right: 25px
+        padding: 0
+        width: 190px
+    .item__top
+        height: auto
+    
+.popup__prod-descr
+    padding-top: 50px
+    overflow: hidden
+    
+.param-img
+    margin: 12px 0
+    li
+        display: inline-block
+        margin: 0 12px 0 0 
+        vertical-align: middle
+.popup__prod-info
+    line-height: 1.4
+    a
+        color: $blue 

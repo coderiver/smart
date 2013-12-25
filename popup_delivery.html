@@ -1,0 +1,625 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Popup delivery</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.cycle2.js"></script>
+	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jquery.raty.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+
+<!-- BEGIN  layout-->
+<div class="l-layout">
+	<header class="header">
+		<div class="l-container">
+			<div class="header__top">
+				<div class="lang">
+					<span class="lang__text">RU</span>
+					<input type="hidden">
+					<ul class="lang__list">
+						<li><a href="#">ENG</a></li>
+						<li><a href="#">UKR</a></li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="#">Марат Сафиулин</a>
+					<a href="#">Выйти</a>
+				</div>
+			</div>
+			<div class="wrap">
+				<a href="#" class="logo"></a>
+				<div class="header__info">
+					<div class="header__tel">498-11-77</div>
+					<div class="header__link-wrap">
+						<a href="#" class="header__link">
+							<i class="icon-basket"></i>
+							<span>В КОРЗИНЕ</span>
+							2 смартфона
+							<i class="header__link-counter">2</i>
+						</a>
+						<a href="#" class="header__link">
+							<i class="icon-phones"></i>
+							<span>СРАВНИВАЕТСЯ</span>
+							2 смартфона
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__nav">
+				<ul class="nav">
+					<li class="nav__item"><a href="#" class="nav__link">главная</a></li>
+					<li class="nav__item is-with-subnav">
+						<a href="#" class="nav__link">смартфоны</a>
+						<div class="subnav">
+							<div class="subnav__col">
+								<div class="subnav__title">Операционная сиситема</div>
+								<ul class="subnav__list">
+									<li><a href="#">iOSa</a></li>
+									<li><a href="#">Android</a></li>
+									<li><a href="#">Windows</a></li>
+									<li><a href="#">Bada</a></li>
+									<li><a href="#">Blackberry</a></li>
+									<li><a href="#">WebOS</a></li>
+								</ul>
+							</div>
+							<div class="subnav__col">
+								<div class="subnav__title">Производитель</div>
+								<ul class="subnav__list">
+									<li><a href="#">Apple</a></li>
+									<li><a href="#">Acer</a></li>
+									<li><a href="#">Blackberry</a></li>
+									<li><a href="#">Dell</a></li>
+									<li><a href="#">HTC</a></li>
+									<li><a href="#">LG</a></li>
+									<li><a href="#">Nokia</a></li>
+									<li><a href="#">Palm</a></li>
+									<li><a href="#">Samsung</a></li>
+									<li><a href="#">Sony</a></li>
+								</ul>
+							</div>
+							<div class="subnav__col">
+								<div class="subnav__title">Цена</div>
+								<ul class="subnav__list">
+									<li><a href="#">< 100 AZN</a></li>
+									<li><a href="#">100 AZN - 200 AZN</a></li>
+									<li><a href="#">200 AZN - 300 AZN</a></li>
+									<li><a href="#">300 AZN - 500 AZN</a></li>
+									<li><a href="#">500 AZN - 700 AZN</a></li>
+									<li><a href="#">700 AZN <</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav__item"><a href="#" class="nav__link">планшеты</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">аксессуары</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">контракты</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">услуги</a></li>
+				</ul>
+				<div class="search">
+					<form>
+						<input type="text" class="search__input">
+						<input type="submit" class="search__submit" value="поиск">
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="l-container">
+		<nav class="page-nav">
+			<span>подбор смартфона по параметрам:</span>
+			<a href="#">Apple</a>
+			<a href="#">Samsung</a>
+			<a href="#">16GB</a>   
+		</nav>
+	</div>
+	<div class="l-main l-main_height">
+		<div class="page-top">
+			<h2 class="page-title">Корзина ваших покупок</h2>
+			<a href="#" class="print-link">РАСПЕЧАТАТЬ</a>
+		</div>
+		<div class="l-col2 l-col2_left">
+			<div class="main">
+				<div class="item-row">
+					<div class="item-row__img">
+						<a href="#">
+							<img src="img/prod1.png" alt="">
+						</a>
+					</div> 
+					<div class="item-row__main">
+						<h3 class="item-row__title"><a href="#">iPhone 5 16 GB</a></h3>
+						<h4 class="item-row__brand">Apple</h4>
+						<div class="item-row__descr">
+							<p>OS 6.0</p>
+							<p>Смартфон/коммуникатор</p>
+							<p>GSM 850/900/1800/1900/2100/ LTE</p>
+							<p><a href="#">Подробнее...</a></p>
+						</div>
+						<div class="colors-wrap">
+		    				<a href="#" class="color is-white"></a>
+		    				<a href="#" class="color is-black is-active"></a>
+		    				<a href="#" class="color is-red"></a>
+		    				<a href="#" class="color is-yellow"></a>
+		    				<a href="#" class="color is-blue"></a>
+		    			</div>
+		    			<div class="item-row__action">
+			    			<div class="choose js-choose" data-max-number="9">
+								<button class="choose__minus js-minus"></button>
+		                        <input type="text" class="choose__input" value="1" readonly="">
+		                        <button class="choose__plus js-plus"></button>
+		                    </div>
+		                    <a class="price is-no-basket" href="#">
+			    				<strong>513</strong> AZN
+			    			</a>
+	                    </div>
+	                    <button class="close"><i></i></button>
+					</div>
+				</div>
+				<div class="item-row item-row_action">
+					<div class="item-row__img">
+						<a href="#">
+							<img src="img/action.png" alt="">
+						</a>
+					</div> 
+					<div class="item-row__main">
+						<h3 class="item-row__title"><a href="#">Годовая гарантия на смарфтоны iPhone</a></h3>
+						<h4 class="item-row__brand">Computex</h4>
+						<div class="item-row__descr">
+							<p>Годовая гарантия на всю продукцию Apple от компании Computex.Как официальный предстваитель Apple на территории Азербайджана, в случае возникших проблем, мы заменим ваш смартфон на такой же новый смартфон.</p>
+						</div>
+						<label class="checkbox">
+                            <input type="checkbox" checked>
+                            <span>Смартфон застрахован на 1 год (14 AZN)</span>
+                        </label>
+					</div>
+				</div>
+				<div class="item-row">
+					<div class="item-row__img">
+						<a href="#">
+							<img src="img/prod1.png" alt="">
+						</a>
+					</div> 
+					<div class="item-row__main">
+						<h3 class="item-row__title"><a href="#">iPhone 5 16 GB</a></h3>
+						<h4 class="item-row__brand">Apple</h4>
+						<div class="item-row__descr">
+							<p>OS 6.0</p>
+							<p>Смартфон/коммуникатор</p>
+							<p>GSM 850/900/1800/1900/2100/ LTE</p>
+							<p><a href="#">Подробнее...</a></p>
+						</div>
+						<div class="colors-wrap">
+		    				<a href="#" class="color is-white"></a>
+		    				<a href="#" class="color is-black is-active"></a>
+		    				<a href="#" class="color is-red"></a>
+		    				<a href="#" class="color is-yellow"></a>
+		    				<a href="#" class="color is-blue"></a>
+		    			</div>
+		    			<div class="item-row__action">
+			    			<div class="choose js-choose" data-max-number="9">
+								<button class="choose__minus js-minus"></button>
+		                        <input type="text" class="choose__input" value="1" readonly="">
+		                        <button class="choose__plus js-plus"></button>
+		                    </div>
+		                    <a class="price is-no-basket" href="#">
+			    				<strong>513</strong> AZN
+			    			</a>
+	                    </div>
+	                    <button class="close"><i></i></button>
+					</div>
+				</div>
+				<div class="item-row">
+					<div class="item-row__main">
+		    			<div class="item-row__action">
+		                    <a class="price is-no-basket" href="#">
+			    				<strong class="price__title">Итого:</strong> 
+			    				<strong>513</strong> AZN
+			    			</a>
+	                    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-col1 l-col1_right">
+			<div class="sidebar">
+				<div class="box box_small">
+					<div class="sidebar__title">Купить сейчас</div>
+					<div class="to-center">
+						<div class="price price_big is-no-basket">
+		    				<strong>513</strong> AZN
+		    			</div>
+		    			<a href="#" class="btn">КУПИТЬ</a>
+		    		</div>
+		    		<div class="rules-text">* Нажимая “купить”, вы автоматич. соглашаетесь с <a href="#">условиями покупки</a></div>
+		    		<div class="box__line"></div>
+				</div>
+				<div class="sidebar__wrap">
+					<div class="sidebar__item">
+						<div class="sidebar__title">Мы принимаем:</div>
+						<ul class="payment">
+							<li><span class="payment__mc"></span></li>
+							<li><span class="payment__visa"></span></li>
+							<li><span class="payment__visa-d"></span></li>
+							<li><span class="payment__wm"></span></li>
+							<li><span class="payment__ym"></span></li>
+							<li><span class="payment__qiwi"></span></li>
+						</ul>
+					</div>
+					<div class="sidebar__item">
+						<div class="sidebar__title">Условия доставки:</div>
+						<div class="rules-text">Наш магазин предоставляет разнообразные <a href="#">варинаты выбора доставки.</a></div>
+					</div>
+					<div class="sidebar__item">
+						<div class="sidebar__title">Нужна помощь?</div>
+						<div class="rules-text">Если у вас возникли вопросы, позвоните нам пожалуйста: <span>498-11-77</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-top">
+			<h2 class="page-title">Кейсы для смартфона iPhone 5</h2>
+		</div>
+		<div class="box">
+			<div class="js-cycle slider"
+                data-cycle-fx="carousel"
+                data-cycle-timeout="5000"
+                data-cycle-slides=".js-slide"
+                data-cycle-carousel-visible=4
+                data-cycle-pager-active-class="is-active"
+                data-cycle-pager-template="<button></button>"
+            >
+            	<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod3.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy S4 16GB</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod4.png" alt="" width="76" height="146"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod3.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy S4 16GB</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod4.png" alt="" width="76" height="146"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+            	<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod3.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+            </div>
+            <div class="pager js-pager"></div>
+			<div class="box__line"></div>
+		</div>
+		<div class="page-top">
+			<h2 class="page-title">Адаптеры для смартфона iPhone 5</h2>
+		</div>
+		<div class="box">
+			<div class="js-cycle slider"
+                data-cycle-fx="carousel"
+                data-cycle-timeout="5000"
+                data-cycle-slides=".js-slide"
+                data-cycle-carousel-visible=4
+                data-cycle-pager-active-class="is-active"
+                data-cycle-pager-template="<button></button>"
+            >
+            	<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod5.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy S4 16GB</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod6.png" alt="" width="76" height="146"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod5.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+        		<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy S4 16GB</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod6.png" alt="" width="76" height="146"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+            	<div class="item js-slide">
+        			<div class="item__top">
+            			<h3 class="item__title">
+            				<a href="#">Samsung Galaxy Ace</a>
+            			</h3>
+            			<h4 class="item__brand">Samsung</h4>
+            		</div>
+        			<a href="#" class="item__img"><img src="img/prod5.png" alt="" width="86" height="151"></a>
+        			<a href="#" class="item__more">Подробнее...</a>
+        			<a class="item__price" href="#">
+        				<strong>659.99</strong> AZN
+        			</a>
+        		</div>
+            </div>
+            <div class="pager js-pager"></div>
+			<div class="box__line"></div>
+		</div>
+	</div>
+	<div class="push"></div>
+</div>
+<!-- END layout-->
+<footer class="footer l-container">
+	<div class="footer__logos">
+		<a href="#"><img src="img/logo1.png" alt=""></a>
+		<a href="#"><img src="img/logo2.png" alt=""></a>
+	</div>
+	<div class="footer__nav">
+		<div class="footer__col">
+			<div class="footer__title">О компании</div>
+			<ul class="footer__list">
+				<li><a href="#">Computex.ws</a></li>
+				<li><a href="#">Работа у нас</a></li>
+				<li><a href="#">Регионы</a></li>
+				<li><a href="#">Пресса о нас </a></li>
+				<li><a href="#">Наши партнеры</a></li>
+				<li><a href="#">Реклама</a></li>
+			</ul>
+		</div>
+		<div class="footer__col">
+			<div class="footer__title">Сервис</div>
+			<ul class="footer__list">
+				<li><a href="#">Ремонт смартфонов</a></li>
+				<li><a href="#">Trade in</a></li>
+				<li><a href="#">Обновления</a></li>
+				<li><a href="#">Постоянным клиентам </a></li>
+				<li><a href="#">интересные предложения</a></li>
+				<li><a href="#">Акции</a></li>
+			</ul>
+		</div>
+		<div class="footer__col">
+			<div class="footer__title">Помощь</div>
+			<ul class="footer__list">
+				<li><a href="#">Как купить онлайн</a></li>
+				<li><a href="#">Связаться с нами</a></li>
+				<li><a href="#">Где моя покупка?</a></li>
+				<li><a href="#">Информация по доставке</a></li>
+				<li><a href="#">Возврат и гарантия</a></li>
+				<li><a href="#">F.A.Q.</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay js-overlay" style="display:block"></div>
+<div class="popup js-popup popup_steps popup_auto-height" style="display:block">
+	<div class="popup__main-title">Выберите удобный для вас способ оплаты (547 AZN)</div>
+	<div class="steps-wrap">
+		<ul class="steps-list">
+			<li class="step is-active">Регистрация</li>
+			<li class="step is-active is-current">Доставка</li>
+			<li class="step">Оплата</li>
+			<li class="step step_last">Подтверждение</li>
+		</ul>
+		<span class="steps__line"></span>
+	</div>
+	<div class="accord js-accordion js-one-active">
+		<div class="accord__title js-accordion-title">
+			<strong>Доставка “Почтой Азербайджана”</strong>
+			<div>Предпочтительно для жителей регионов</div>
+			<i class="icon-delivery"></i>
+		</div>
+		<div class="accord__main js-accordion-list">
+			<form>
+				<div class="field">
+					<div class="field__main">
+						<div class="select select_white js-select">
+			                <span class="select__text js-select-text">Баку</span>
+			                <input type="hidden" class="js-select-input" value="">
+			                <ul class="select__list js-select-list">
+			                    <li data-id="0">Баку</li>
+			                    <li data-id="1">var2</li>
+			                    <li data-id="2">var3</li>
+			                    <li data-id="3">var4</li>
+			                </ul>
+			            </div>
+					</div>
+					<div class="field__text">Выберите улицу</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Укажите номер дома</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Номер вашей квартиры</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<div class="rules-text">Заполните пожалуйста поля, это необходимо для того, чтоб предоставить вам досп к вашей защищенной информации</div>
+					</div>
+					<div class="field__text">
+						<input type="submit" class="btn" value="ПРОДОЛЖИТЬ">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="accord js-accordion js-one-active">
+		<div class="accord__title js-accordion-title">
+			<strong>Доставка курьером (15 AZN)</strong>
+			<div>Осуществляем доставку в любую точку г.Баку</div>
+			<i class="icon-delivery"></i>
+		</div>
+		<div class="accord__main js-accordion-list">
+			<form>
+				<div class="field">
+					<div class="field__main">
+						<div class="select select_white js-select">
+			                <span class="select__text js-select-text">Баку</span>
+			                <input type="hidden" class="js-select-input" value="">
+			                <ul class="select__list js-select-list">
+			                    <li data-id="0">Баку</li>
+			                    <li data-id="1">var2</li>
+			                    <li data-id="2">var3</li>
+			                    <li data-id="3">var4</li>
+			                </ul>
+			            </div>
+					</div>
+					<div class="field__text">Выберите улицу</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Укажите номер дома</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Номер вашей квартиры</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<div class="rules-text">Заполните пожалуйста поля, это необходимо для того, чтоб предоставить вам досп к вашей защищенной информации</div>
+					</div>
+					<div class="field__text">
+						<input type="submit" class="btn" value="ПРОДОЛЖИТЬ">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="accord js-accordion js-one-active">
+		<div class="accord__title js-accordion-title">
+			<strong>Самовывоз</strong>
+			<div>По адресу ул. Хагани 24/18</div>
+			<i class="icon-delivery"></i>
+		</div>
+		<div class="accord__main js-accordion-list">
+			<form>
+				<div class="field">
+					<div class="field__main">
+						<div class="select select_white js-select">
+			                <span class="select__text js-select-text">Баку</span>
+			                <input type="hidden" class="js-select-input" value="">
+			                <ul class="select__list js-select-list">
+			                    <li data-id="0">Баку</li>
+			                    <li data-id="1">var2</li>
+			                    <li data-id="2">var3</li>
+			                    <li data-id="3">var4</li>
+			                </ul>
+			            </div>
+					</div>
+					<div class="field__text">Выберите улицу</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Укажите номер дома</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<input type="text" class="input input_s">
+					</div>
+					<div class="field__text">Номер вашей квартиры</div>
+				</div>
+				<div class="field">
+					<div class="field__main">
+						<div class="rules-text">Заполните пожалуйста поля, это необходимо для того, чтоб предоставить вам досп к вашей защищенной информации</div>
+					</div>
+					<div class="field__text">
+						<input type="submit" class="btn" value="ПРОДОЛЖИТЬ">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<button class="close js-close"><i></i></button>
+</div>
+</body>
+</html>

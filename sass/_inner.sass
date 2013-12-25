@@ -55,18 +55,7 @@
 		float: right
 		color: #000 
 		
-.print-link
-	position: relative
-	padding-right: 26px
-	font-size: 8px
-	text-transform: uppercase
-	color: #62687e 
-	&:after
-		content: ""
-		position: absolute
-		right: 0
-		top: -5px
-		+s(print) 
+
 .box_small
 	.sidebar__title
 		margin-left: 7px
@@ -159,6 +148,7 @@
 .accord
 	padding: 0 32px 
 .accord__title
+	position: relative
 	margin-bottom: 10px
 	padding: 15px
 	border: 1px solid #829192 
@@ -173,6 +163,11 @@
 		+box-shadow(-2px 2px 0 transparent)
 	&:hover
 		+box-shadow(none)
+	.icon-delivery
+		position: absolute
+		top: 15px
+		right: 28px
+		+s(delivery)
 .accord__main
 	padding: 0 15px
 .field
