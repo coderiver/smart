@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Product</title>
+	<title>Popup 360</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/jquery-1.10.2.min.js"></script>
@@ -264,24 +264,22 @@
 						<li class="nav__item"><a href="#" class="nav__link">360</a></li>
 					</ul>
 				</div>
-				<div class="js-gallery-group">
-					<div class="product__gallery js-gallery">
-						<a href="img/prod1.png" class="product__img">
-							<img src="img/prod1.png" alt="" width="30">
-						</a>
-						<a href="img/prod2.png" class="product__img">
-							<img src="img/prod2.png" alt="" width="30">
-						</a>
-						<div class="product__img-big js-gallery-preview">
-							<div><img src="img/product1-b.png" alt=""></div>
-						</div>
-						<a href="img/prod3.png" class="product__img">
-							<img src="img/prod3.png" alt="" width="30">
-						</a>
-						<a href="img/product1-b.png" class="product__img is-active">
-							<img src="img/product4-s.png" alt="">
-						</a>
+				<div class="product__gallery js-prod-gallery">
+					<a href="img/prod1.png" class="product__img">
+						<img src="img/prod1.png" alt="" width="30">
+					</a>
+					<a href="img/prod2.png" class="product__img">
+						<img src="img/prod2.png" alt="" width="30">
+					</a>
+					<div class="product__img-big">
+						<div><img src="img/product1-b.png" alt=""></div>
 					</div>
+					<a href="img/prod3.png" class="product__img">
+						<img src="img/prod3.png" alt="" width="30">
+					</a>
+					<a href="img/product1-b.png" class="product__img">
+						<img src="img/product4-s.png" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -402,5 +400,31 @@
 		</div>
 	</div>
 </footer>
+<div class="overlay" style="display:block"></div>
+<div class="popup popup_view" style="display:block">
+	<div class="item">
+		<div class="item__top">
+			<h3 class="item__title">
+				<a href="#">iPhone 5 16 GB</a>
+			</h3>
+			<h4 class="item__brand">Apple</h4>
+		</div>
+		<div class="item__img"><img src="img/popup1.png" alt=""></div>
+		<div class="wrap">
+			<div class="colors-wrap">
+				<a href="#" class="color is-white"></a>
+				<a href="#" class="color is-black is-active"></a>
+				<a href="#" class="color is-red"></a>
+				<a href="#" class="color is-yellow"></a>
+				<a href="#" class="color is-blue"></a>
+			</div>
+			<div class="zoom">
+				<span class="zoom__line"></span>
+				<span class="zoom__key" style="left:100px"></span>
+			</div>
+		</div>
+	</div>
+	<button class="close"><i></i></button>
+</div>
 </body>
 </html>

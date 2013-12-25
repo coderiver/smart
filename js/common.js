@@ -163,11 +163,19 @@ $(document).ready(function() {
     }
     choose();
 
-
-    $(".js-prod-gallery a").click(function(){
-        var url = $(this).attr("href");
-        $(this).parent().find(".product__img-big img").attr("src", url);
-        return false;
-    });
+    function simpleGallery() {
+        $(".js-gallery").each(function(){
+            var url = $(this).find("a.is-active").attr("href");
+            $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
+        });
+        $(".js-gallery a").click(function(){
+            $(".js-gallery a").removeClass("is-active");
+            $(this).addClass("is-active");
+            var url = $(this).attr("href");
+            $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
+            return false;
+        });
+    }
+    simpleGallery();
     
 });
