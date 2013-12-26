@@ -475,3 +475,57 @@
 		height: 64px
 		margin: 13px auto 0
 		border: 1px solid $border 
+		
+
+.compare-fixed
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	height: 144px
+	background: #5d647b
+	z-index: 10000
+	.l-container
+		+clr
+.item_white
+	position: relative
+	background: none
+	color: #fff 
+	a
+		color: #fff
+	.item__brand
+		color: #fff 
+	.close
+		position: absolute
+		top: 16px
+		right: 16px
+		background: #fff
+		i
+			+s(close2)
+	.item__img-empty
+		background: #5d6887
+		border-color: #fff
+		span
+			border-color: #7a839d
+.compare-fixed__left
+	float: left
+	width: 228px
+	text-align: center
+	.btn
+		padding: 16px 28px
+	.compare-counter
+		margin: 18px 0 30px
+.compare-counter
+	position: relative
+	padding-left: 44px
+	color: #fff
+	text-align: left
+	strong
+		display: block
+		text-transform: uppercase
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(phones2)  

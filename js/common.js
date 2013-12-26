@@ -215,5 +215,18 @@ $(document).ready(function() {
             tooltip.hide()
         }
     );
+
+    var popup = $(".js-popup");
+    var overlay = $(".js-overlay");
+    $(".js-close").click(function(){
+        $(this).parents(".js-popup").hide();
+        overlay.hide();
+        return false;
+    });
+    overlay.click(function(){
+        $(this).hide();
+        popup.hide();
+        return false;
+    });
     
 });
