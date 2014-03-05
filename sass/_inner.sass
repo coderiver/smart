@@ -240,6 +240,7 @@
 .article
 	padding: 32px
 	+clr
+	color: #4c4f5a 
 	p
 		margin-bottom: 17px
 	img
@@ -393,33 +394,37 @@
 		bottom: 14px
 		
 .sibebar-nav
-	padding: 0 32px 
+	padding: 22px 32px 
+	line-height: 1.4
 	a
 		color: #62687e
-	
 .item_compare
 	position: relative
 	padding-bottom: 0
-	&:hover
-		.close
-			display: block
+	padding-top: 20px
 	.close
-		display: none
 		position: absolute
-		top: 19px
-		right: 10px
+		top: 21px
+		right: 15px
 	.item__img
 		line-height: 1
 		height: auto
 		margin-bottom: 0
+	.item__top
+		height: 41px
+	.rate
+		margin-bottom: 22px
+	.item__img-empty
+		margin-top: 38px
 .compare
-	padding: 18px 0 
+	padding: 15px 0
+	line-height: 1.4
 	border-top: 1px solid $border
 	&:first-child
 		border-top: 0
 .compare__title
 	position: relative
-	padding: 0 32px 
+	padding: 0 30px 
 	font-size: 16px
 	font-weight: bold
 	cursor: pointer
@@ -437,23 +442,23 @@
 
 .compare__list
 .compare__item
-	padding: 6px 32px
+	padding: 5px 30px
 	font-size: 0
 	+clr
 	&:hover
 		background: #ebf9fa 
 .compare__main
-	padding-top: 10px
+	padding-top: 3px
 .compare__col
 	display: inline-block
 	width: 25%
 	font-size: 12px
-	vertical-align: top
+	vertical-align: middle
 	+box
 	.price
-		margin-right: 50px
+		margin-right: 66px
 	.colors-wrap
-		margin-bottom: 0  
+		margin: -3px 0 0  
 .icon-not
 	display: inline-block
 	+s(no)  
@@ -475,8 +480,13 @@
 		width: 108px
 		height: 64px
 		margin: 13px auto 0
-		border: 1px solid $border 
-		
+		border: 1px solid $border 	
+.show-all
+	display: inline-block
+	margin-bottom: 19px
+	font-size: 8px
+	text-transform: uppercase
+	color: $violet 
 
 .compare-fixed
 	position: fixed

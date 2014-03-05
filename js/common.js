@@ -107,8 +107,14 @@ $(document).ready(function() {
             }
             
         });
+        $(".js-show-all-accordion").on("click",function(){
+            $(".js-accordion-list").slideDown("fast");
+            return false;
+        });
     }
     accordion();
+
+
 
     function ui_slider() {
         $(".js-ui-slider").each(function(){
@@ -254,5 +260,7 @@ $(document).ready(function() {
         return false;
     });
 
-   
+   $(".js-del-item").on("click", function(){
+        $(this).parents(".js-item").remove();
+   });
 });

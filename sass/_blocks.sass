@@ -39,7 +39,7 @@
 .tab
 	background: #f0f0f1
 	height: 47px
-	border: 1px solid #e1e2e9
+	border: 1px solid $border
 	+clr
 .tab__item
 	float: left
@@ -112,7 +112,26 @@
 	height: 16px
 	background: #000
 	+opacity(.1) 
-	 
+.box__col
+	float: right
+	width: 50%
+	&:first-child
+		float: left
+	.prod-var
+		a
+			color: $gray 
+.box_product
+	margin: 40px 0 0 -48px		
+	.tab
+		position: absolute
+		left: -1px
+		top: -49px
+		border-left: 1px solid $border 
+		border-top: 1px solid $border 
+.box-white
+	background: #fff
+	border: 1px solid $border
+	border-top: 0
 .item
 	float: left
 	padding: 18px 23px 27px 32px
@@ -229,7 +248,7 @@
 		height: 258px
 
 .pager
-	margin: 6px 0 24px
+	margin: 21px 0 24px
 	font-size: 0
 	text-align: center
 	button
@@ -258,16 +277,18 @@
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
 .page-top
-	padding: 0 0 0 40px
-	height: 47px
-	line-height: 47px
+	padding: 0 18px 0 40px
+	height: 46px
+	line-height: 46px
 	clear: both
 	background: #f0f0f1  
 	.page-title,
-	.pagin,
-	.select
+	.pagin
 		display: inline-block
 		vertical-align: middle
+	.select
+		float: right
+		margin-top: 6px
 	.page-title
 		width: 215px
 		margin-right: 9px
@@ -284,18 +305,21 @@
 		float: right
 	.print-link
 		float: right
-		margin: 17px 25px 0 0
+		margin: 20px 8px 0 0
 		line-height: 1
 	.page-title_width
 		width: auto
+	.pagin
+		margin-top: -2px
+		margin-left: 20px
 .page-title
 	color: #000
 	font-size: 16px 
 .pagin
 	position: relative
 	z-index: 2
-	height: 46px
-	line-height: 46px
+	height: 45px
+	line-height: 45px
 	color: #818181
 	font-size: 0
 	.pagin__title, a
@@ -341,6 +365,11 @@
 	.is-active
 		border-top: 1px solid #fff
 		margin-top: -1px 
+.pagin_last
+	padding-left: 31px
+	border: 1px solid #cacdd8 
+	border-top: 0
+
 .select
 	position: relative
 	cursor: pointer
@@ -349,6 +378,7 @@
 		.select__text
 			&:after
 				+rotate(-180)
+
 .select_white
 	background: #fff 
 .select__text
@@ -427,7 +457,7 @@
 			background: #56b7fb
 	&.is-active
 		position: relative
-		margin: 0 8px 
+		margin: 0 2px 
 		width: 28px
 		height: 28px
 		&:after
@@ -455,6 +485,7 @@
 .checkbox
 	position: relative
 	display: inline-block
+	cursor: pointer
 	input
 		position: absolute
 		left: 0
@@ -547,8 +578,21 @@
 	padding: 11px 0 9px 10px
 .item-row_action
 	position: relative
+	padding-top: 6px
+	padding-top: 4px
 	z-index: 2
 	border-top: 1px dashed $border 
+	.item-row__main
+		padding-top: 10px
+.item-row_order
+	padding-bottom: 6px
+	.item-row__descr
+		width: 100%
+	.item-row__right 
+		.price
+			margin: 15px 0 0
+	.colors-wrap
+		margin-bottom: 23px
 .item-row__img
 	float: left
 	width: 155px
