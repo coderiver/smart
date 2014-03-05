@@ -1,5 +1,6 @@
 .ui-slider-wrap
 	padding-bottom: 29px
+	margin: 0 32px 
 .ui-widget-content
 	position: relative
 	height: 4px
@@ -9,36 +10,14 @@
 	z-index: 2
 	top: 50%
 	margin-top: -16px
-	width: 18px
-	height: 32px
-	background: #62687e 
-	&:after
-		content: ""
-		position: absolute
-		top: 50%
-		margin-top: -7px
-	&:before
-		content: ""
-		position: absolute
-		top: 0
 	&.is-from
-		margin-left: 0
-		&:before
-			right: -14px
-			+arr(14,32,#62687e,r)
-		&:after
-			left: 15px
-			+s(arr4)
+		margin-left: -32px
+		+s(handler-prev)
 	&.is-to
-		margin-left: -18px
-		&:before
-			left: -14px
-			+arr(14,32,#62687e,l)
-		&:after
-			right: 15px
-			+s(arr5)
-	
-
+		margin-right: -32px
+		+s(handler-next)
+	&.ui-state-hover
+		z-index: 3 
 
 .ui-slider-range
 	position: absolute
@@ -56,4 +35,3 @@
 		vertical-align: middle
 	strong
 		font-size: 16px
-.ui-slider-main

@@ -33,7 +33,7 @@
 .tab-wrap
 	height: 447px
 	background: #f0f0f1 	
-	border: 1px solid #e1e2e9	
+	border: 1px solid $border	
 	.tab
 		border: 0
 .tab
@@ -53,7 +53,7 @@
 	color: $violet 
 	font-size: 16px
 	text-align: center
-	border-right: 1px solid #e1e2e9
+	border-right: 1px solid $border
 	&.is-active
 		position: relative
 		z-index: 2
@@ -135,6 +135,7 @@
 .item__brand
 	font-weight: normal 
 .item__img
+	position: relative
 	display: block
 	margin-bottom: 14px
 	text-align: center
@@ -144,11 +145,30 @@
 	&:hover
 		img
 			+opacity(.8)
+		span
+			+opacity(1)
 	img
 		max-width: 100%
 		height: auto
 		vertical-align: middle
 		+transition(opacity .2s linear)
+.item__view
+	position: absolute
+	+opacity(0)
+	top: 50%
+	left: 50%
+	margin: -26px 0 0 -53px
+	width: 108px
+	height: 52px
+	line-height: 52px
+	+box
+	+transition(opacity .2s linear)
+	font-size: 16px
+	text-transform: uppercase
+	color: #ebebec 
+	border: 1px solid #b1b5c7
+	background: #717791
+
 .item__price
 	display: inline-block
 	position: relative
@@ -238,9 +258,9 @@
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
 .page-top
-	padding: 0 0 0 28px
-	height: 46px
-	line-height: 46px
+	padding: 0 0 0 40px
+	height: 47px
+	line-height: 47px
 	clear: both
 	background: #f0f0f1  
 	.page-title,
@@ -287,6 +307,7 @@
 		height: 46px
 		font-size: 16px
 		text-align: center
+		color: #4e6aad 
 		border-left: 1px solid $border
 		border-right: 1px solid $border
 		&:hover
@@ -371,6 +392,9 @@
 .colors-wrap
 	margin-bottom: 20px
 	font-size: 0	
+	.color
+		&:first-child
+			margin-left: 0
 .color
 	display: inline-block
 	vertical-align: middle
@@ -382,6 +406,7 @@
 	border-style: solid 
 	background: #fff 
 	+border-radius(50%)
+	
 	&.is-white
 		border: 1px solid $violet
 	&.is-black
@@ -475,6 +500,8 @@
 	background: #4e6aad 
 	display: inline-block
 	vertical-align: middle
+	&:hover
+		+border-radius(50%)
 .choose__plus
 	&:after
 		content: ""
@@ -505,7 +532,7 @@
 	
 .item-row
 	position: relative
-	padding: 16px 0 16px 10px 
+	padding: 16px 0 13px 10px 
 	border-top: 1px solid #cacdd8 
 	+clr
 	a
@@ -516,6 +543,8 @@
 		right: 24px
 	&:first-child
 		border-top: 0
+.item-row_price-summ
+	padding: 11px 0 9px 10px
 .item-row_action
 	position: relative
 	z-index: 2
@@ -532,6 +561,8 @@
 	overflow: hidden
 	padding: 0 32px 1px 0
 	+clr
+	.colors-wrap
+		margin-bottom: 18px
 .item-row__left
 	float: left
 .item-row__right
@@ -548,7 +579,9 @@
 	font-size: 12px
 	font-weight: normal  
 .item-row__descr
-	margin: 16px 0
+	margin: 17px 0 14px
+	width: 80%
+	line-height: 1.4
 .item-row__action
 	.choose,
 	.colors-wrap
@@ -595,6 +628,10 @@
 		position: relative
 		top: 2px
 		background: #d70000 
+.btn_small
+	padding: 10px 25px
+	font-size: 12px
+	font-weight: normal
 
 .rules-text
 	font-size: 10px

@@ -15,6 +15,7 @@
 
 .filter__item
 	margin-bottom: 18px
+	padding-left: 12px
 .filter__title
 	position: relative
 	margin-bottom: 11px
@@ -34,7 +35,7 @@
 			+s(minus)
 .cancel-link
 	position: relative
-	padding-right: 18px
+	padding: 0 30px 0 12px
 	display: inline-block
 	color: $blue 
 	&:after
@@ -64,30 +65,40 @@
 		
 .sidebar
 	.box_small
-		margin-bottom: 20px
+		margin-bottom: 22px
 		background: #fdfdff 
+	.payment
+		margin: -26px 0 32px 0
 .box_small
 	position: relative
 	right: -16px
 	margin-left: 0 
-	padding: 15px 20px 15px 20px 
+	padding: 18px 20px 15px 20px 
 	width: 100%
 	+box
-       
-.sidebar__title
-	margin-bottom: 20px
+	.sidebar__title
+		margin-bottom: 2px  
+	.rules-text 
+		text-align: center    
+.sidebar__title  
+	margin-bottom: 2px
 	font-size: 16px
 	color: $violet
 	font-weight: bold 
-	
 .to-center
 	text-align: center
 
 .sidebar__wrap
-	padding: 10px 32px 
+	padding: 10px 16px 10px 32px
 .sidebar__item
+	padding-left: 14px
 	margin-bottom: 20px
+	&:first-child
+		.sidebar__title 
+			margin-bottom: 20px
 	.rules-text 
+		text-align: left
+		line-height: 1.2  
 		span
 			display: block
 			font-size: 20px

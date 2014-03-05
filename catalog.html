@@ -21,12 +21,12 @@
 	<header class="header">
 		<div class="l-container">
 			<div class="header__top">
-				<div class="lang">
-					<span class="lang__text">RU</span>
-					<input type="hidden">
-					<ul class="lang__list">
-						<li><a href="#">ENG</a></li>
-						<li><a href="#">UKR</a></li>
+				<div class="lang js-select">
+					<span class="lang__text js-select-text">RU</span>
+					<input type="hidden" class="js-select-input">
+					<ul class="lang__list js-select-list">
+						<li data-id="0"><a href="#">ENG</a></li>
+						<li data-id="1"><a href="#">UKR</a></li>
 					</ul>
 				</div>
 				<div class="login">
@@ -305,7 +305,7 @@
                 <div class="filter__item js-accordion">
                     <div class="filter__title js-accordion-title">Цвета</div>
                     <div class="filter__body js-accordion-list">
-                    	<ul class="colors-wrap colors-wrap_vertical">
+                    	<ul class="colors-wrap colors-wrap_vertical js-color-choser">
 		    				<li>
 		    					<a href="#" class="color is-white"></a>
 		    					<a href="#">Белый</a>

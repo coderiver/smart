@@ -21,12 +21,12 @@
 	<header class="header">
 		<div class="l-container">
 			<div class="header__top">
-				<div class="lang">
-					<span class="lang__text">RU</span>
-					<input type="hidden">
-					<ul class="lang__list">
-						<li><a href="#">ENG</a></li>
-						<li><a href="#">UKR</a></li>
+				<div class="lang js-select">
+					<span class="lang__text js-select-text">RU</span>
+					<input type="hidden" class="js-select-input">
+					<ul class="lang__list js-select-list">
+						<li data-id="0"><a href="#">ENG</a></li>
+						<li data-id="1"><a href="#">UKR</a></li>
 					</ul>
 				</div>
 				<div class="login">
@@ -195,13 +195,13 @@
 							<p>GSM 850/900/1800/1900/2100/ LTE</p>
 							<p><a href="#">Подробнее...</a></p>
 						</div>
-						<div class="colors-wrap">
+						<!-- <div class="colors-wrap">
 		    				<a href="#" class="color is-white"></a>
 		    				<a href="#" class="color is-black is-active"></a>
 		    				<a href="#" class="color is-red"></a>
 		    				<a href="#" class="color is-yellow"></a>
 		    				<a href="#" class="color is-blue"></a>
-		    			</div>
+		    			</div> -->
 		    			<div class="item-row__action">
 			    			<div class="choose js-choose" data-max-number="9">
 								<button class="choose__minus js-minus"></button>
@@ -215,7 +215,7 @@
 	                    <button class="close"><i></i></button>
 					</div>
 				</div>
-				<div class="item-row">
+				<div class="item-row item-row_price-summ">
 					<div class="item-row__main">
 		    			<div class="item-row__action">
 		                    <a class="price is-no-basket" href="#">
@@ -264,7 +264,7 @@
 			</div>
 		</div>
 		<div class="page-top">
-			<h2 class="page-title">Кейсы для смартфона iPhone 5</h2>
+			<h2 class="page-title page-title_width">Кейсы для смартфона iPhone 5</h2>
 		</div>
 		<div class="box">
 			<div class="js-cycle slider"

@@ -60,9 +60,9 @@
 	.sidebar__title
 		margin-left: 7px
 	.price
-		margin: 13px 0 15px 
+		margin: 13px 0 5px 
 	.btn
-		margin-bottom: 20px
+		margin-bottom: 22px
 
 .basket-item
 	position: relative
@@ -486,8 +486,16 @@
 	height: 144px
 	background: #5d647b
 	z-index: 10000
+	overflow: hidden
 	.l-container
 		+clr
+		padding-top: 4px
+	&.is-static
+		position: absolute
+		bottom: 226px
+	.btn_small
+		float: left
+		margin-left: 21px
 .item_white
 	position: relative
 	background: none
@@ -510,10 +518,9 @@
 			border-color: #7a839d
 .compare-fixed__left
 	float: left
-	width: 228px
+	margin-left: 23px
+	width: 202px
 	text-align: center
-	.btn
-		padding: 16px 28px
 	.compare-counter
 		margin: 18px 0 30px
 .compare-counter

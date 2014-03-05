@@ -21,12 +21,12 @@
 	<header class="header">
 		<div class="l-container">
 			<div class="header__top">
-				<div class="lang">
-					<span class="lang__text">RU</span>
-					<input type="hidden">
-					<ul class="lang__list">
-						<li><a href="#">ENG</a></li>
-						<li><a href="#">UKR</a></li>
+				<div class="lang js-select">
+					<span class="lang__text js-select-text">RU</span>
+					<input type="hidden" class="js-select-input">
+					<ul class="lang__list js-select-list">
+						<li data-id="0"><a href="#">ENG</a></li>
+						<li data-id="1"><a href="#">UKR</a></li>
 					</ul>
 				</div>
 				<div class="login">
@@ -307,7 +307,7 @@
                 <div class="filter__item js-accordion">
                     <div class="filter__title js-accordion-title">Цвета</div>
                     <div class="filter__body js-accordion-list">
-                    	<ul class="colors-wrap colors-wrap_vertical">
+                    	<ul class="colors-wrap colors-wrap_vertical js-color-choser">
 		    				<li>
 		    					<a href="#" class="color is-white"></a>
 		    					<a href="#">Белый</a>
@@ -344,7 +344,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -354,8 +357,8 @@
 	    				<i class="item__quant">1</i>
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox" data-id="0">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
@@ -368,7 +371,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -378,8 +384,8 @@
 	    				<i class="item__quant">1</i>
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox" data-id="1">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
@@ -392,7 +398,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -402,8 +411,8 @@
 	    				<i class="item__quant">1</i>
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox" data-id="2">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
@@ -416,7 +425,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -426,8 +438,8 @@
 	    				<i class="item__quant">99</i>
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox" data-id="3">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
@@ -440,7 +452,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -450,8 +465,8 @@
 	    				<i class="item__quant">1</i>
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox"  data-id="4">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
@@ -464,7 +479,10 @@
 	        			<h4 class="item__brand">Apple</h4>
 	        			<div class="rate js-rate"></div>
 	        		</div>
-	    			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+	    			<a href="#" class="item__img">
+	    				<img src="img/catalog1.png" alt="">
+	    				<span class="item__view">Взглянуть</span>
+	    			</a>
 	    			<div class="colors-wrap">
 	    				<a href="#" class="color is-white is-active"></a>
 	    			</div>
@@ -473,20 +491,146 @@
 	    				<strong>659</strong> AZN
 	    			</a>
 	    			<div class="checkbox-wrap">
-                        <label class="checkbox">
-                            <input type="checkbox">
+                        <label class="checkbox js-add-to-compare">
+                            <input type="checkbox"  data-id="5">
                             <span>Добавить к сравнению</span>
                         </label>
                     </div>
 	    		</div>
 			</div>
-			<div class="pagin pagin_bottom">
+			<div class="pagin pagin_bottom js-compare-box-target">
 				<div class="pagin__title">1-15 из 40 вариантов</div>
 				<a href="#" class="is-active"><span>страница</span>1</a>
 				<a href="#"><span>страница</span> 2</a>
 				<a href="#"><span>страница</span> 3</a>
 				<a href="#"><span>страница</span> 4</a>
 				<a href="#" class="pagin__more"></a>
+			</div>
+		</div>
+	</div>
+	<div class="compare-fixed js-compare-box">
+		<div class="l-container">
+			<div class="compare-fixed__left">
+				<div class="compare-counter">
+					<strong>СРАВНИВАЕТСЯ</strong>
+					2 аксессуара
+				</div>
+				<a href="#" class="btn btn_small">Сравнить</a>
+			</div>
+			<div class="item item_white">
+					<div class="item__top">
+						<h3 class="item__title">
+							<a href="#">Belkin hard case for iPhone 5 Glossy white </a>
+						</h3>
+						<h4 class="item__brand">Apple</h4>
+					</div>
+					<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+					<div class="colors-wrap">
+						<a href="#" class="color is-white is-active"></a>
+					</div>
+					<a href="#" class="item__more">Подробнее...</a>
+					<a class="item__price" href="#">
+						<strong>659</strong> AZN
+					</a>
+					<div class="checkbox-wrap">
+			            <label class="checkbox">
+			                <input type="checkbox">
+			                <span>Добавить к сравнению</span>
+			            </label>
+			        </div>
+			        <button class="close"><i></i></button>
+				</div>
+				<div class="item item_white">
+					<div class="item__top">
+						<h3 class="item__title">
+							<a href="#">Belkin hard case for iPhone 5 Glossy white </a>
+						</h3>
+						<h4 class="item__brand">Apple</h4>
+					</div>
+					<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+					<div class="colors-wrap">
+						<a href="#" class="color is-white is-active"></a>
+					</div>
+					<a href="#" class="item__more">Подробнее...</a>
+					<a class="item__price" href="#">
+						<strong>659</strong> AZN
+					</a>
+					<div class="checkbox-wrap">
+			            <label class="checkbox">
+			                <input type="checkbox">
+			                <span>Добавить к сравнению</span>
+			            </label>
+			        </div>
+			        <button class="close"><i></i></button>
+				</div>
+			<div class="item item_white">
+				<div class="item__top">
+					Выберите еще аксессуар для сравнения
+				</div>
+				<a href="#" class="item__img-empty">
+					<span></span>
+				</a>
+				<div class="colors-wrap">
+					<a href="#" class="color is-white is-active"></a>
+				</div>
+				<a href="#" class="item__more">Подробнее...</a>
+				<a class="item__price" href="#">
+					<strong>659</strong> AZN
+				</a>
+				<div class="checkbox-wrap">
+		            <label class="checkbox">
+		                <input type="checkbox">
+		                <span>Добавить к сравнению</span>
+		            </label>
+		        </div>
+			</div>
+			<div class="js-clone-item">
+				<div class="item item_white">
+					<div class="item__top">
+						<h3 class="item__title">
+							<a href="#">Belkin hard case for iPhone 5 Glossy white </a>
+						</h3>
+						<h4 class="item__brand">Apple</h4>
+					</div>
+					<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
+					<div class="colors-wrap">
+						<a href="#" class="color is-white is-active"></a>
+					</div>
+					<a href="#" class="item__more">Подробнее...</a>
+					<a class="item__price" href="#">
+						<strong>659</strong> AZN
+					</a>
+					<div class="checkbox-wrap">
+			            <label class="checkbox">
+			                <input type="checkbox">
+			                <span>Добавить к сравнению</span>
+			            </label>
+			        </div>
+			        <button class="close"><i></i></button>
+				</div>
+			</div>
+			<div class="js-empty-item">
+				<div class="item item_white">
+					<div class="item__top">
+						Выберите еще аксессуар для сравнения
+					</div>
+					<a href="#" class="item__img-empty">
+						<span></span>
+					</a>
+					<div class="colors-wrap">
+						<a href="#" class="color is-white is-active"></a>
+					</div>
+					<a href="#" class="item__more">Подробнее...</a>
+					<a class="item__price" href="#">
+						<strong>659</strong> AZN
+					</a>
+					<div class="checkbox-wrap">
+			            <label class="checkbox">
+			                <input type="checkbox">
+			                <span>Добавить к сравнению</span>
+			            </label>
+			        </div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -534,83 +678,6 @@
 		</div>
 	</div>
 </footer>
-<div class="compare-fixed">
-	<div class="l-container">
-		<div class="compare-fixed__left">
-			<div class="compare-counter">
-				<strong>СРАВНИВАЕТСЯ</strong>
-				2 аксессуара
-			</div>
-			<a href="#" class="btn">Сравнить</a>
-		</div>
-		<div class="item item_white">
-			<div class="item__top">
-				<h3 class="item__title">
-					<a href="#">Belkin hard case for iPhone 5 Glossy white </a>
-				</h3>
-				<h4 class="item__brand">Apple</h4>
-			</div>
-			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
-			<div class="colors-wrap">
-				<a href="#" class="color is-white is-active"></a>
-			</div>
-			<a href="#" class="item__more">Подробнее...</a>
-			<a class="item__price" href="#">
-				<strong>659</strong> AZN
-			</a>
-			<div class="checkbox-wrap">
-	            <label class="checkbox">
-	                <input type="checkbox">
-	                <span>Добавить к сравнению</span>
-	            </label>
-	        </div>
-	        <button class="close"><i></i></button>
-		</div>
-		<div class="item item_white">
-			<div class="item__top">
-				<h3 class="item__title">
-					<a href="#">Belkin hard case for iPhone 5 Glossy white </a>
-				</h3>
-				<h4 class="item__brand">Apple</h4>
-			</div>
-			<a href="#" class="item__img"><img src="img/catalog1.png" alt=""></a>
-			<div class="colors-wrap">
-				<a href="#" class="color is-white is-active"></a>
-			</div>
-			<a href="#" class="item__more">Подробнее...</a>
-			<a class="item__price" href="#">
-				<strong>659</strong> AZN
-			</a>
-			<div class="checkbox-wrap">
-	            <label class="checkbox">
-	                <input type="checkbox">
-	                <span>Добавить к сравнению</span>
-	            </label>
-	        </div>
-	        <button class="close"><i></i></button>
-		</div>
-		<div class="item item_white">
-			<div class="item__top">
-				Выберите еще аксессуар для сравнения
-			</div>
-			<a href="#" class="item__img-empty">
-				<span></span>
-			</a>
-			<div class="colors-wrap">
-				<a href="#" class="color is-white is-active"></a>
-			</div>
-			<a href="#" class="item__more">Подробнее...</a>
-			<a class="item__price" href="#">
-				<strong>659</strong> AZN
-			</a>
-			<div class="checkbox-wrap">
-	            <label class="checkbox">
-	                <input type="checkbox">
-	                <span>Добавить к сравнению</span>
-	            </label>
-	        </div>
-		</div>
-	</div>
-</div>
+
 </body>
 </html>
