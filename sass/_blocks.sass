@@ -84,17 +84,16 @@
 .box
 	position: relative
 	border: 1px solid $border
-	border-top: 0
 	clear: both
 	width: 1024px
 	+box
-	margin-left: -16px
+	margin-left: -17px
 	background: #fff
 	&:before,
 	&:after
 		content: ""
 		position: absolute
-		top: -15px
+		top: -16px
 	&:before
 		left: 0
 		+arr(15,15,#687584,br)
@@ -104,10 +103,12 @@
 	.tab
 		border-width: 0
 		border-bottom-width: 1px
+.box_mod
+	border-top: 0
 .box__line
 	position: absolute
-	left: 14px
-	right: 14px
+	left: 16px
+	right: 16px
 	bottom: -16px
 	height: 16px
 	background: #000
@@ -277,7 +278,7 @@
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
 .page-top
-	padding: 0 18px 0 40px
+	padding: 0 18px 0 26px
 	height: 46px
 	line-height: 46px
 	clear: both
@@ -287,31 +288,37 @@
 		display: inline-block
 		vertical-align: middle
 	.select
-		float: right
+		float: left
 		margin-top: 6px
 	.page-title
-		width: 215px
-		margin-right: 9px
+		width: 193px
+		margin: 0
 	.select
 		width: 228px
 		margin-left: 44px
 	.select_m
-		margin: 0 8px 0 0 
-		width: 210px
-	.page-title
-		margin: 0
-		width: 193px
+		margin: 7px 8px 0 0 
+		width: 210px	
+	.page-title_m
+		float: left
+		margin-right: 17px
+		width: 207px
+		overflow: hidden  
+		text-align: center
 	.pagin_right
 		float: right
+		margin-right: 1px
 	.print-link
 		float: right
 		margin: 20px 8px 0 0
 		line-height: 1
 	.page-title_width
 		width: auto
-	.pagin
-		margin-top: -2px
-		margin-left: 20px
+.page-top_no-padding
+	padding: 0
+.page-top__right
+	float: left
+	width: 768px
 .page-title
 	color: #000
 	font-size: 16px 
