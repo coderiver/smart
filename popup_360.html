@@ -11,6 +11,7 @@
 	<script src="js/jquery.cycle2.carousel.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery.raty.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -409,7 +410,9 @@
 			</h3>
 			<h4 class="item__brand">Apple</h4>
 		</div>
-		<div class="item__img"><img src="img/popup1.png" alt=""></div>
+		<div class="item__img js-rotate-img">
+			<img src="img/prod-rotate/1.png" alt="" data-url="img/prod-rotate/">  
+		</div>
 		<div class="wrap">
 			<div class="colors-wrap">
 				<a href="#" class="color is-white"></a>
@@ -418,9 +421,9 @@
 				<a href="#" class="color is-yellow"></a>
 				<a href="#" class="color is-blue"></a>
 			</div>
-			<div class="zoom">
-				<span class="zoom__line"></span>
-				<span class="zoom__key" style="left:100px"></span>
+			<div class="zoom js-rotate">
+				<div class="zoom__line js-rotate-main"></div>
+				<!-- <span class="zoom__key" style="left:100px"></span> -->
 			</div>
 		</div>
 	</div>

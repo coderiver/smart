@@ -49,9 +49,35 @@
 .zoom
     position: relative
     height: 28px
-    overflow: hidden
+    //overflow: hidden
     width: 176px
-    overflow: hidden
+    .ui-slider-handle
+        position: absolute
+        top: 50%
+        margin: -14px 0 0 -14px
+        width: 24px
+        height: 24px
+        border: 2px solid #62687e 
+        background: #fff 
+        +border-radius(50%)
+        cursor: pointer
+        &:after
+            content: "" 
+            position: absolute
+            top: 50%
+            left: 50%
+            margin: -5px 0 0 -7px
+            +s(zoom) 
+        // &:before
+        //     content: ""
+        //     position: absolute
+        //     top: 50%
+        //     left: -200px
+        //     right: 0
+        //     margin-top: -2px
+        //     width: 200px
+        //     height: 4px
+        //     background: #62687e
 .zoom__line
     position: absolute
     top: 50%
@@ -60,39 +86,42 @@
     margin-top: -2px
     height: 4px
     background: #cacdd8 
-.zoom__key
-    position: absolute
-    top: 50%
-    margin: -14px 0 0 -14px
-    width: 24px
-    height: 24px
-    border: 2px solid #62687e 
-    background: #fff 
-    +border-radius(50%)
-    cursor: pointer
-    &:after
-        content: "" 
-        position: absolute
-        top: 50%
-        left: 50%
-        margin: -5px 0 0 -7px
-        +s(zoom) 
-    &:before
-        content: ""
-        position: absolute
-        top: 50%
-        left: -200px
-        right: 0
-        margin-top: -2px
-        width: 200px
-        height: 4px
-        background: #62687e
+// .zoom__key
+//     position: absolute
+//     top: 50%
+//     margin: -14px 0 0 -14px
+//     width: 24px
+//     height: 24px
+//     border: 2px solid #62687e 
+//     background: #fff 
+//     +border-radius(50%)
+//     cursor: pointer
+//     &:after
+//         content: "" 
+//         position: absolute
+//         top: 50%
+//         left: 50%
+//         margin: -5px 0 0 -7px
+//         +s(zoom) 
+//     &:before
+//         content: ""
+//         position: absolute
+//         top: 50%
+//         left: -200px
+//         right: 0
+//         margin-top: -2px
+//         width: 200px
+//         height: 4px
+//         background: #62687e
 .zoom_glass
-    .zoom__key    
+    // .zoom__key    
+    //     &:after
+    //         margin: -6px 0 0 -7px 
+    //         +s(zoom-glass)   
+    .ui-slider-handle
         &:after
             margin: -6px 0 0 -7px 
-            +s(zoom-glass)   
-
+            +s(zoom-glass)    
 .popup_media
     width: 864px
 .popup__title
@@ -121,6 +150,7 @@
     height: 416px
     text-align: center
     line-height: 416px
+    overflow: hidden
     img
         vertical-align: middle
         max-width: 100%

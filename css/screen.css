@@ -801,15 +801,13 @@ a { color: #575c6d; text-decoration: none; }
 .popup_view .colors-wrap { float: left; margin-bottom: 0; }
 .popup_view .zoom { float: right; }
 
-.zoom { position: relative; height: 28px; overflow: hidden; width: 176px; overflow: hidden; }
+.zoom { position: relative; height: 28px; width: 176px; }
+.zoom .ui-slider-handle { position: absolute; top: 50%; margin: -14px 0 0 -14px; width: 24px; height: 24px; border: 2px solid #62687e; background: white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; cursor: pointer; }
+.zoom .ui-slider-handle:after { content: ""; position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -7px; background: url('../img/icons-sf595f1d2c8.png') 0 -1326px no-repeat; width: 15px; height: 10px; }
 
 .zoom__line { position: absolute; top: 50%; left: 0; right: 0; margin-top: -2px; height: 4px; background: #cacdd8; }
 
-.zoom__key { position: absolute; top: 50%; margin: -14px 0 0 -14px; width: 24px; height: 24px; border: 2px solid #62687e; background: white; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; cursor: pointer; }
-.zoom__key:after { content: ""; position: absolute; top: 50%; left: 50%; margin: -5px 0 0 -7px; background: url('../img/icons-sf595f1d2c8.png') 0 -1326px no-repeat; width: 15px; height: 10px; }
-.zoom__key:before { content: ""; position: absolute; top: 50%; left: -200px; right: 0; margin-top: -2px; width: 200px; height: 4px; background: #62687e; }
-
-.zoom_glass .zoom__key:after { margin: -6px 0 0 -7px; background: url('../img/icons-sf595f1d2c8.png') 0 -599px no-repeat; width: 14px; height: 13px; }
+.zoom_glass .ui-slider-handle:after { margin: -6px 0 0 -7px; background: url('../img/icons-sf595f1d2c8.png') 0 -599px no-repeat; width: 14px; height: 13px; }
 
 .popup_media { width: 864px; }
 
@@ -826,7 +824,7 @@ a { color: #575c6d; text-decoration: none; }
 .gallery__left .colors-wrap { float: left; margin-bottom: 0; }
 .gallery__left .zoom { float: right; }
 
-.gallery__img { margin: 12px 0; width: 528px; height: 416px; text-align: center; line-height: 416px; }
+.gallery__img { margin: 12px 0; width: 528px; height: 416px; text-align: center; line-height: 416px; overflow: hidden; }
 .gallery__img img { vertical-align: middle; max-width: 100%; height: auto; }
 
 .gallery__right { overflow: hidden; }

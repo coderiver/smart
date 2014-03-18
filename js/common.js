@@ -263,4 +263,116 @@ $(document).ready(function() {
    $(".js-del-item").on("click", function(){
         $(this).parents(".js-item").remove();
    });
+   
+
+   if ($(".js-tel-input").length) {
+        $(".js-tel-input").mask("(999) 999-99-99");
+    }
+
+    function zoomImg() {
+        $(".js-zoom-img").each(function(){
+            var slider = $(this).find(".js-zoom-img-main");
+            var start_width = $(".js-gallery-preview img").attr("width");
+            slider.slider({
+                range: "min",
+                max: 5,
+                step: 1,
+                value: 0,
+                slide: function( event, ui ) {
+                    $(".js-gallery-preview img").css({
+                        width: +(+start_width*ui.value) + (+start_width)
+                    });
+                }
+            });
+            //ui_input.val(slider.slider( "values", 0 ));
+            $(".js-gallery-preview img").css({
+                width: +(+start_width*(slider.slider( "values", 0 ))) + (+start_width)
+            });
+        });
+    }
+    zoomImg();
+    function rotateImg() {
+        $(".js-rotate").each(function(){
+            var slider = $(this).find(".js-rotate-main");
+            var img = $(".js-rotate-img img");
+            var img_url = $(".js-rotate-img img").attr("data-url");
+            slider.slider({
+                range: "min",
+                max: 11,
+                step: 1,
+                value: 0,
+                slide: function( event, ui ) {
+                    img.attr("src", img_url+ui.value+".png")
+                    //ui_input.val(ui.value);
+                    // $(".js-gallery-preview img").css({
+                    //     width: +(+start_width*ui.value) + (+start_width)
+                    // });
+                }
+            });
+            img.attr("src", img_url+slider.slider( "values", 0 )+".png")
+        });
+    }
+    rotateImg();
+
+    $(".js-cancel-filter").hide();
+    $(".js-accordion .checkbox input").on("change", function(){
+        if ($(this).parents(".js-accordion").find("input:checked").length > 0) {
+            $(".js-cancel-filter").show();
+        }
+        else {
+            $(".js-cancel-filter").hide();
+        }
+    });
+    $(".js-cancel-filter").on("click", function(){
+        $(this).parent().find(".checkbox input").removeAttr("checked");
+        $(".js-cancel-filter").hide();
+        return false;
+    });
+
+    $(".js-change-color a").on("click", function(){
+        var img_url = $(this).attr("href");
+        $(this).parents(".js-item").find(".js-item-img img").attr("src", img_url);
+        $(this).parent().find("a").removeClass("is-active");
+        $(this).addClass("is-active");
+        return false;
+    });
+
+    $(".js-item-price").on("click", function(){
+        var counter =  $(this).attr("data-count");
+        counter++;
+        $(this).addClass("is-active").attr("data-count", counter);
+        $(this).find(".item__quant").text(counter);
+       return false;
+    });
+
+    $(".js-add-to-compare input").on("change", function(){
+        var id = $(this).attr("data-id");
+        if ($(this).is(":checked")) {
+            
+            var counter = $(this).parents(".js-item").parent().find(".js-add-to-compare input:checked").length;
+            console.log(counter);
+            $(this).parent().find("span").text("Сравнивается c "+counter);
+
+            $(".js-compare-row").find(".js-empty-item").first().remove();
+            var html = $(".js-clone-item").html();
+            $(".js-compare-row").prepend(html);
+            $(".js-compare-row").find(".js-item-full").first().addClass(id);
+        }
+        else {
+            $(this).parent().find("span").text("Добавить к сравнению");
+            $("."+id).remove();
+             var html = $(".js-clone-item-empty").html();
+            $(".js-compare-row").prepend(html);
+        }
+        
+    });
+
+    $(".js-compare-row").on("click",".js-del-item", function(){
+        $(this).parents(".js-item-full").remove();
+        $(".js-compare-row").find(".js-empty-item").first();
+        var html = $(".js-clone-item-empty").html();
+        $(".js-compare-row").prepend(html);
+        //$(".js-item").first().find(".js-add-to-compare input").removeAttr("checked");
+    });
+
 });

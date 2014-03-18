@@ -12,6 +12,7 @@
 	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery.raty.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -250,36 +251,38 @@
 				<div class="box box_small">
 					<div class="sidebar__title">Марат <br>Сафиулин</div>
 					<div class="form">
-						<div class="input-wrap is-valid-error">
-							<input class="input" type="tel" value="65-56-78" placeholder="Телефон">
-						</div>
-						<div class="input-wrap is-valid-error">
-							<div class="select select_white js-select">
-				                <span class="select__text js-select-text">Баку</span>
-				                <input type="hidden" class="js-select-input" value="">
-				                <ul class="select__list js-select-list">
-				                    <li data-id="0">Баку</li>
-				                    <li data-id="1">var2</li>
-				                    <li data-id="2">var3</li>
-				                    <li data-id="3">var4</li>
-				                </ul>
-				            </div>
-						</div>
-						<div class="input-wrap is-valid-ok">
-							<input class="input" type="text" value="ул. Хагани 84/12" placeholder="Улица">
-						</div>
-						<div class="input-wrap">
-							<input class="input" type="text" placeholder="Квартира">
-						</div>
-						<div class="input-wrap">
-							marat.safiulin@gmail.com
-						</div>
-						<div class="input-wrap">
-							<a href="#">изменить пароль</a>
-						</div>
-						<div class="input-wrap">
-							<input class="btn" type="submit" value="СОХРАНИТЬ">
-						</div>
+						<form>
+							<div class="input-wrap">
+								<input class="input js-tel-input" type="tel" placeholder="Телефон" na>
+							</div>
+							<div class="input-wrap">
+								<div class="select select_white js-select">
+					                <span class="select__text js-select-text">Баку</span>
+					                <input type="hidden" class="js-select-input" value="">
+					                <ul class="select__list js-select-list">
+					                    <li data-id="0">Баку</li>
+					                    <li data-id="1">var2</li>
+					                    <li data-id="2">var3</li>
+					                    <li data-id="3">var4</li>
+					                </ul>
+					            </div>
+							</div>
+							<div class="input-wrap is-valid-ok">
+								<input class="input" type="text" value="ул. Хагани 84/12" placeholder="Улица">
+							</div>
+							<div class="input-wrap is-valid-error">
+								<input class="input" type="text" placeholder="Квартира">
+							</div>
+							<div class="input-wrap">
+								marat.safiulin@gmail.com
+							</div>
+							<div class="input-wrap">
+								<a href="#">изменить пароль</a>
+							</div>
+							<div class="input-wrap">
+								<input class="btn" type="submit" value="СОХРАНИТЬ">
+							</div>
+						</form>
 					</div>
 		    		<div class="box__line"></div>
 				</div>
