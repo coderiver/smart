@@ -122,7 +122,9 @@
 		a
 			color: $gray 
 .box_product
-	margin: 40px 0 0 -48px		
+	margin: 40px 0 0 -48px	
+	&:before
+		top: -64px	
 	.tab
 		position: absolute
 		left: -1px
@@ -308,6 +310,8 @@
 	.pagin_right
 		float: right
 		margin-right: 1px
+	.pagin_left
+		float: left
 	.print-link
 		float: right
 		margin: 20px 8px 0 0
@@ -316,6 +320,9 @@
 		width: auto
 .page-top_no-padding
 	padding: 0
+.page-top_right-select
+	.select
+		float: right
 .page-top__right
 	float: left
 	width: 768px

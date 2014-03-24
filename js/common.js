@@ -179,14 +179,17 @@ $(document).ready(function() {
     choose();
 
     function simpleGallery() {
-        $(".js-gallery").each(function(){
-            var url = $(this).find("a.is-active").attr("href");
-            $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
-        });
+        // $(".js-gallery").each(function(){
+        //     var url = $(this).find("a.is-active").attr("href");
+        //     $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
+        // });
         $(".js-gallery a").click(function(){
             $(".js-gallery a").removeClass("is-active");
             $(this).addClass("is-active");
             var url = $(this).attr("href");
+            var url_replace =  $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src");
+            $(this).find("img").attr("src", url_replace);
+            $(this).attr("href", url_replace);
             $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
             return false;
         });
