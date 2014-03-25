@@ -128,7 +128,7 @@ $(document).ready(function() {
                 min: 0,
                 max: 5000,
                 step: 100,
-                values: [ 100, 4000 ],
+                values: [ 0, 4000 ],
                 slide: function( event, ui ) {
                     from.text(ui.values[0]);
                     input_from.val(ui.values[0]);
@@ -239,27 +239,28 @@ $(document).ready(function() {
     });
     
 
-    function fixedCompare() {
-        var top = $(".js-compare-box-target").offset().top - $(window).height();
-        if ($(window).scrollTop() >= top) {
-            $(".js-compare-box").addClass("is-static");
-        }
-        else {
-            $(".js-compare-box").removeClass("is-static");
-        }
-    }
-   if ($(".js-compare-box").length) {
-         fixedCompare();
-    }
-    $(window).scroll(function(){
-        if ($(".js-compare-box").length) {
-             fixedCompare();
-        }
-    });
+    // function fixedCompare() {
+    //     var top = $(".js-compare-box-target").offset().top - $(window).height();
+    //     if ($(window).scrollTop() >= top) {
+    //         $(".js-compare-box").addClass("is-static");
+    //     }
+    //     else {
+    //         $(".js-compare-box").removeClass("is-static");
+    //     }
+    // }
+   // if ($(".js-compare-box").length) {
+   //       fixedCompare();
+   //  }
+   //  $(window).scroll(function(){
+   //      if ($(".js-compare-box").length) {
+   //           fixedCompare();
+   //      }
+   //  });
 
     $(".js-color-choser li").on("click", function(){
-        $(".js-color-choser .color").removeClass("is-active");
-        $(this).find(".color").addClass("is-active");
+        //$(".js-color-choser .color").removeClass("is-active");
+        $(".js-cancel-filter").show();
+        $(this).find(".color").toggleClass("is-active");
         return false;
     });
 
@@ -329,6 +330,7 @@ $(document).ready(function() {
     $(".js-cancel-filter").on("click", function(){
         $(this).parent().find(".checkbox input").removeAttr("checked");
         $(".js-cancel-filter").hide();
+        $(".js-color-choser .color").removeClass("is-active");
         return false;
     });
 

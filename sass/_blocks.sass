@@ -31,7 +31,7 @@
 		
 
 .tab-wrap
-	height: 447px
+	height: 442px
 	background: #f0f0f1 	
 	border: 1px solid $border	
 	.tab
@@ -125,6 +125,8 @@
 	margin: 40px 0 0 -48px	
 	&:before
 		top: -64px	
+	&:after
+		right: 1px
 	.tab
 		position: absolute
 		left: -1px
@@ -185,7 +187,7 @@
 	line-height: 52px
 	+box
 	+transition(opacity .2s linear)
-	font-size: 16px
+	font-size: 14px
 	text-transform: uppercase
 	color: #ebebec 
 	border: 1px solid #b1b5c7
@@ -251,7 +253,7 @@
 		height: 258px
 
 .pager
-	margin: 21px 0 24px
+	margin: 5px 0 24px
 	font-size: 0
 	text-align: center
 	button
@@ -279,6 +281,9 @@
 				+box-shadow(none)
 		&:hover
 			+box-shadow(0 0 0 6px $violet_dark)
+.pager_index
+	margin: 0 0 27px	
+
 .page-top
 	padding: 0 18px 0 26px
 	height: 46px
@@ -303,13 +308,17 @@
 		width: 210px	
 	.page-title_m
 		float: left
-		margin-right: 17px
+		margin-right: 15px
 		width: 207px
 		overflow: hidden  
 		text-align: center
 	.pagin_right
 		float: right
 		margin-right: 1px
+		.is-active
+			height: 47px
+		.pagin__more
+			border-right: 0
 	.pagin_left
 		float: left
 	.print-link
@@ -592,8 +601,6 @@
 	padding: 11px 0 9px 10px
 .item-row_action
 	position: relative
-	padding-top: 6px
-	padding-top: 4px
 	z-index: 2
 	border-top: 1px dashed $border 
 	.item-row__main
