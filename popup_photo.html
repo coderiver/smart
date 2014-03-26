@@ -11,7 +11,8 @@
 	<script src="js/jquery.cycle2.carousel.js"></script>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/jquery.raty.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+	
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -408,15 +409,15 @@
 	<div class="gallery js-gallery-group">
 		<div class="gallery__left">
 			<div class="gallery__img js-gallery-preview">
-				<img src="img/img1-small.png" alt="" width="112">
+				<img src="img/img1-small.png" alt="" width="112" class="js-draggable">
 			</div>
 			<div class="wrap">
-				<div class="colors-wrap">
-					<a href="#" class="color is-white"></a>
-					<a href="#" class="color is-black is-active"></a>
-					<a href="#" class="color is-red"></a>
-					<a href="#" class="color is-yellow"></a>
-					<a href="#" class="color is-blue"></a>
+				<div class="colors-wrap js-change-color" data-color-group="js-color-group1">
+					<a href="js-color-white" class="color is-white"></a>
+					<a href="js-color-black" class="color is-black is-active"></a>
+					<a href="js-color-red" class="color is-red"></a>
+					<a href="js-color-yellow" class="color is-yellow"></a>
+					<a href="js-color-blue" class="color is-blue"></a>
 				</div>
 				<div class="zoom zoom_glass js-zoom-img">
 					<div class="zoom__line js-zoom-img-main"></div>
@@ -424,60 +425,282 @@
 				</div>
 			</div>
 		</div>
-		<div class="gallery__right">
-			<div class="gallery__slider cycle-slideshow js-gallery" 
-				data-cycle-fx=carousel
-				data-cycle-speed="200"
-			    data-cycle-timeout="0"
-			    data-cycle-pager=".pager"
-			    data-cycle-carousel-visible="3"
-			    data-cycle-carousel-vertical=true
-			    data-cycle-slides=".gallery__slide"
-			    data-cycle-pager-active-class="is-active"
-	            data-cycle-pager-template="<button></button>"
-			>
-				<div class="gallery__slide">
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
+		<div class="gallery__right js-color-group1">
+			<div class="js-color-white js-color-el">
+				<div class="gallery__slider cycle-slideshow js-gallery" 
+					data-cycle-fx=carousel
+					data-cycle-speed="200"
+				    data-cycle-timeout="0"
+				    data-cycle-pager=".js-pager1"
+				    data-cycle-carousel-visible="3"
+				    data-cycle-carousel-vertical=true
+				    data-cycle-slides=".gallery__slide"
+				    data-cycle-pager-active-class="is-active"
+		            data-cycle-pager-template="<button></button>"
+				>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
 				</div>
-				<div class="gallery__slide">
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-				</div>
-				<div class="gallery__slide">
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-				</div>
-				<div class="gallery__slide">
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-				</div>
-				<div class="gallery__slide">
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-					<a href="img/img1-small.png">
-						<img src="img/img1-small.png" alt="">
-					</a>
-				</div>
+				<div class="pager js-pager1"></div>
 			</div>
-			<div class="pager"></div>
+			<div class="js-color-black js-color-el">
+				<div class="gallery__slider cycle-slideshow js-gallery" 
+					data-cycle-fx=carousel
+					data-cycle-speed="200"
+				    data-cycle-timeout="0"
+				    data-cycle-pager=".js-pager2"
+				    data-cycle-carousel-visible="3"
+				    data-cycle-carousel-vertical=true
+				    data-cycle-slides=".gallery__slide"
+				    data-cycle-pager-active-class="is-active"
+		            data-cycle-pager-template="<button></button>"
+				>
+					<div class="gallery__slide">
+						<a href="img/prod2.png">
+							<img src="img/prod2.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="pager js-pager2"></div>
+			</div>
+			<div class="js-color-red js-color-el">
+				<div class="gallery__slider cycle-slideshow js-gallery" 
+					data-cycle-fx=carousel
+					data-cycle-speed="200"
+				    data-cycle-timeout="0"
+				    data-cycle-pager=".js-pager3"
+				    data-cycle-carousel-visible="3"
+				    data-cycle-carousel-vertical=true
+				    data-cycle-slides=".gallery__slide"
+				    data-cycle-pager-active-class="is-active"
+		            data-cycle-pager-template="<button></button>"
+				>
+					<div class="gallery__slide">
+						<a href="img/prod1.png">
+							<img src="img/prod1.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="pager js-pager4"></div>
+			</div>
+			<div class="js-color-yellow js-color-el">
+				<div class="gallery__slider cycle-slideshow js-gallery" 
+					data-cycle-fx=carousel
+					data-cycle-speed="200"
+				    data-cycle-timeout="0"
+				    data-cycle-pager=".js-pager4"
+				    data-cycle-carousel-visible="3"
+				    data-cycle-carousel-vertical=true
+				    data-cycle-slides=".gallery__slide"
+				    data-cycle-pager-active-class="is-active"
+		            data-cycle-pager-template="<button></button>"
+				>
+					<div class="gallery__slide">
+						<a href="img/prod3.png">
+							<img src="img/prod3.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="pager js-pager4"></div>
+			</div>
+			<div class="js-color-blue js-color-el">
+				<div class="gallery__slider cycle-slideshow js-gallery" 
+					data-cycle-fx=carousel
+					data-cycle-speed="200"
+				    data-cycle-timeout="0"
+				    data-cycle-pager=".js-pager5"
+				    data-cycle-carousel-visible="3"
+				    data-cycle-carousel-vertical=true
+				    data-cycle-slides=".gallery__slide"
+				    data-cycle-pager-active-class="is-active"
+		            data-cycle-pager-template="<button></button>"
+				>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+					<div class="gallery__slide">
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+						<a href="img/img1-small.png">
+							<img src="img/img1-small.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="pager js-pager5"></div>
+			</div>
 		</div> 
 	</div>
 	<button class="close js-close"><i></i></button>

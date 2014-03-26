@@ -108,7 +108,16 @@ $(document).ready(function() {
             
         });
         $(".js-show-all-accordion").on("click",function(){
-            $(".js-accordion-list").slideDown("fast");
+            if ($(this).hasClass("is-active")) {
+                $(".js-show-all-accordion").removeClass("is-active");
+                $(".js-accordion-list").slideUp("fast");
+                $(".js-show-all-accordion").text("ПОКАЗАТЬ ВСЕ ПУНКТЫ");
+            }
+            else {
+                $(".js-show-all-accordion").addClass("is-active");
+                $(".js-accordion-list").slideDown("fast");
+                $(".js-show-all-accordion").text("скрыть все списки");
+            }
             return false;
         });
     }
@@ -179,22 +188,37 @@ $(document).ready(function() {
     choose();
 
     function simpleGallery() {
-        // $(".js-gallery").each(function(){
-        //     var url = $(this).find("a.is-active").attr("href");
-        //     $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
-        // });
+        $(".js-gallery").each(function(){
+            var url = $(this).find("a.is-active").attr("href");
+            $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
+        });
         $(".js-gallery a").click(function(){
             $(".js-gallery a").removeClass("is-active");
             $(this).addClass("is-active");
             var url = $(this).attr("href");
-            var url_replace =  $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src");
-            $(this).find("img").attr("src", url_replace);
-            $(this).attr("href", url_replace);
             $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
             return false;
         });
     }
     simpleGallery();
+
+    function simpleGalleryProd() {
+        // $(".js-gallery").each(function(){
+        //     var url = $(this).find("a.is-active").attr("href");
+        //     $(this).parents(".js-gallery-group").find(".js-gallery-preview img").attr("src", url);
+        // });
+        $(".js-gallery-prod a").click(function(){
+            $(".js-gallery-prod a").removeClass("is-active");
+            $(this).addClass("is-active");
+            var url = $(this).attr("href");
+            var url_replace =  $(this).parents(".js-gallery-prod-group").find(".js-gallery-prod-preview img").attr("src");
+            $(this).find("img").attr("src", url_replace);
+            $(this).attr("href", url_replace);
+            $(this).parents(".js-gallery-prod-group").find(".js-gallery-prod-preview img").attr("src", url);
+            return false;
+        });
+    }
+    simpleGalleryProd();
 
     $(".js-tooltip-text").hide();
     var tooltip = $(".js-tooltip");
@@ -379,5 +403,31 @@ $(document).ready(function() {
         $(".js-compare-row").prepend(html);
         //$(".js-item").first().find(".js-add-to-compare input").removeAttr("checked");
     });
+
+    $(".js-color-el").hide();
+
+    $(".js-change-color").each(function(){
+        var color_group = $(this).attr("data-color-group");
+        var color_el = $(this).find(".is-active").attr("href");
+        $("."+color_group).find("."+color_el).show();
+    });
+    
+    $(".js-change-color a").on("click", function(){
+        var color_group = $(this).parent().attr("data-color-group");
+        var color_el = $(this).attr("href");
+
+        $(this).parent().find("a").removeClass("is-active");
+        $(this).addClass("is-active");
+
+        $("."+color_group).find(".js-color-el").hide();
+        $("."+color_group).find("."+color_el).show();
+
+        return false;
+    });
+
+    if ($(".js-draggable").length) {
+        $(".js-draggable").draggable();
+    }
+    
 
 });
