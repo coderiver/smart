@@ -326,8 +326,7 @@
 			top: 50%
 			margin-top: -13px
 			right: 10px
-	.is-active
-		.price
+		&:hover
 			color: #fff 
 			background: #eb6014 
 			&:after
@@ -340,7 +339,7 @@
 		text-align: center
 		color: #fff
 		font-size: 10px 
-		font-style: normal
+		font-style: normal   
 .product__bottom
 	position: absolute
 	bottom: 0
@@ -515,6 +514,7 @@
 	overflow: hidden
 	.l-container
 		+clr
+		position: relative
 		padding-top: 4px
 	&.is-static
 		position: absolute
@@ -522,6 +522,18 @@
 	.btn_small
 		float: left
 		margin-left: 21px
+	.item-wrap_1
+		position: absolute
+		left: 225px
+		top: 4px
+	.item-wrap_2
+		position: absolute
+		left: 480px
+		top: 4px
+	.item-wrap_3
+		position: absolute
+		left: 735px
+		top: 4px
 .item_white
 	position: relative
 	background: none

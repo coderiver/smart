@@ -380,28 +380,43 @@ $(document).ready(function() {
             
             var counter = $(this).parents(".js-item").parent().find(".js-add-to-compare input:checked").length;
             console.log(counter);
-            $(this).parent().find("span").text("Сравнивается c "+counter);
 
-            $(".js-compare-row").find(".js-empty-item").first().remove();
+    
             var html = $(".js-clone-item").html();
-            $(".js-compare-row").prepend(html);
-            $(".js-compare-row").find(".js-item-full").first().addClass(id);
+            if (counter == 1) {
+                $(".js-compare-row").find(".js-new-item").first().html(html).addClass(id).attr("data-id" , id);
+                $(".js-add-to-compare input:checked").next().text("Сравнивается c "+counter);
+            }
+            if (counter == 2) {
+                $(".js-compare-row").find(".js-new-item").first().next().html(html).addClass(id).attr("data-id" , id);
+                $(".js-add-to-compare input:checked").next().text("Сравнивается c "+counter);
+            }
+            if (counter == 3) {
+                $(".js-compare-row").find(".js-new-item").first().next().next().html(html).addClass(id).attr("data-id" , id);
+                $(".js-add-to-compare input:checked").next().text("Сравнивается c "+counter);
+            }
+            
         }
         else {
+
             $(this).parent().find("span").text("Добавить к сравнению");
-            $("."+id).remove();
-             var html = $(".js-clone-item-empty").html();
-            $(".js-compare-row").prepend(html);
+            $("."+id).find(".js-item-full").remove();
+
+            var html = $(".js-clone-item-empty").html();
+            var counter = $(this).parents(".js-item").parent().find(".js-add-to-compare input:checked").length;
+                
+            $(".js-compare-row").find("."+id).html(html);
+            $(".js-add-to-compare input:checked").next().text("Сравнивается c "+counter);
         }
         
     });
 
     $(".js-compare-row").on("click",".js-del-item", function(){
-        $(this).parents(".js-item-full").remove();
-        $(".js-compare-row").find(".js-empty-item").first();
         var html = $(".js-clone-item-empty").html();
-        $(".js-compare-row").prepend(html);
-        //$(".js-item").first().find(".js-add-to-compare input").removeAttr("checked");
+        var id = $(this).parents(".js-new-item").attr("class");
+        console.log(id);
+        $(this).parents(".js-new-item").html(html);
+        
     });
 
     $(".js-color-el").hide();
