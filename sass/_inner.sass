@@ -23,7 +23,7 @@
 	.item__brand
 		margin-bottom: 10px
 	.item__price
-		margin-left: 26px
+		margin-left: 16px
 	.checkbox-wrap
 		margin-top: 17px  
 
@@ -59,9 +59,10 @@
 .contract__action
 	+clr
 	.price
-		margin-right: 32px
 		float: right
 		color: #000 
+		&:hover
+			color: #fff 
 		
 
 .box_small
@@ -450,7 +451,6 @@
 			top: 8px
 			+s(minus)
 
-.compare__list
 .compare__item
 	padding: 5px 30px
 	font-size: 0
@@ -472,6 +472,11 @@
 		padding-right: 8px
 	.price
 		margin-right: 33px
+		padding: 0 42px 0 10px
+		&:after
+			top: -3px
+		&:hover
+			+box-shadow(0 0 0 5px #eb6014)
 	.colors-wrap
 		margin: -3px 0 0 8px 
 .icon-not

@@ -172,7 +172,7 @@
 		span
 			+opacity(1)
 	img
-		max-width: 100%
+		max-width: 100%  
 		height: auto
 		vertical-align: middle
 		+transition(opacity .2s linear)
@@ -196,26 +196,37 @@
 .item__price
 	display: inline-block
 	position: relative
+	padding: 7px 42px 5px 10px
 	color: #62687e
 	&:after
 		content: ""
 		position: absolute
-		right: -33px
-		top: -6px
+		right: 9px
+		top: 2px  
 		+s(to-basket) 
+	&:hover
+		background: #eb6014    
+		color: #fff
+		&:after
+			+s(to-basket-w)
 	strong
 		font-size: 16px
 	&.is-no-basket
 		&:after
-			display: none	
+			display: none	      
 	&.is-active
 		&:after
 			+s(to-basket-h)
+		&:hover
+			background: #eb6014
+			color: #fff
+			&:after
+				+sp(to-basket-w)
 .item__quant
 	position: absolute
-	right: -31px
-	top: 1px
-	z-index: 2
+	right: 11px
+	top: 9px
+	z-index: 2      
 	width: 16px
 	text-align: center
 	font-size: 10px
@@ -225,12 +236,21 @@
 .price
 	display: inline-block
 	position: relative
+	padding: 7px 42px 5px 10px
 	color: #62687e
+	&:hover
+		background: #eb6014
+		color: #fff !important
+		//+box-shadow(0 0 0 5px #d35612)
+		strong
+			color: #fff 
+		&:after
+			+s(to-basket-w)
 	&:after
 		content: ""
 		position: absolute
-		right: -33px
-		top: -6px
+		right: 9px
+		top: 3px
 		+s(to-basket) 
 	strong
 		font-size: 16px
@@ -658,7 +678,7 @@
 		color: $violet 
 .item-row_search
 	.price
-		margin-right: 25px
+		margin-right: -9px
 .item-row__id
 	font-size: 16px
 	font-weight: bold

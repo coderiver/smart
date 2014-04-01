@@ -444,5 +444,13 @@ $(document).ready(function() {
         $(".js-draggable").draggable();
     }
     
+    $(".js-targets a").on("click", function(){
+        var url = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $("."+url).offset().top
+        }, 500);
+        return false;
+        
+    });
 
 });
