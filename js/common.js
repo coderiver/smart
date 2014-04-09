@@ -366,6 +366,7 @@ $(document).ready(function() {
         return false;
     });
 
+    // aad product to busket
     $(".js-item-price").on("click", function(){
         var counter =  $(this).attr("data-count");
         counter++;
@@ -379,7 +380,6 @@ $(document).ready(function() {
         if ($(this).is(":checked")) {
             
             var counter = $(this).parents(".js-item").parent().find(".js-add-to-compare input:checked").length;
-            console.log(counter);
 
     
             var html = $(".js-clone-item").html();
@@ -414,8 +414,10 @@ $(document).ready(function() {
     $(".js-compare-row").on("click",".js-del-item", function(){
         var html = $(".js-clone-item-empty").html();
         var id = $(this).parents(".js-new-item").attr("class");
-        console.log(id);
         $(this).parents(".js-new-item").html(html);
+            
+            
+
         
     });
 
